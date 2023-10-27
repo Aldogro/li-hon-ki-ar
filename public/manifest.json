@@ -1,0 +1,9 @@
+{
+  "short_name": "Li Hon Ki",
+  "name": "Instituto Li Hon Ki Argentina",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
