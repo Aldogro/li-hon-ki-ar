@@ -1,6 +1,9 @@
 :root {
   --main-bg-color: #ffffff;
   --main-font-color: #333333;
+  --header-bg: #33333333;
+  --box-shadow-color: #aaaaaa;
+  --sticky-header-height: 60px;
 }
 
 * {

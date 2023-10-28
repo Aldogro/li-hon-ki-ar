@@ -1,0 +1,111 @@
+.sticky-header {
+    padding: 20px;
+    background-color: var(--header-bg);
+    min-height: var(--sticky-header-height);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 10px 20px var(--box-shadow-color);
+    transition: all 0.5s ease;
+}
+
+.sticky-header.scrolled {
+    color: var(--main-color);
+    border-bottom: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.sticky-header .container {
+    max-width: 1200px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.desktop-menu .contact-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 2px solid;
+    padding-bottom: 20px;
+    gap: 30px;
+}
+
+.desktop-menu .contact-info .contact-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7px;
+}
+
+.desktop-menu .sections {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1rem;
+    gap: 30px;
+    padding-top: 20px;
+}
+.desktop-menu .sections .link-item {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.mobile-menu-open {
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+}
+.mobile-menu-open .close-icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+.mobile-menu-open .mobile-menu-logo {
+    opacity: 0.1;
+    position: absolute;
+    width: calc(100% - 40px);
+    top: 20%;
+}
+.mobile-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.mobile-menu-footer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    width: calc(100% - 40px);
+    bottom: 100px;
+    right: 20px;
+}
+.mobile-menu-footer .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (min-width: 1028px) {
+    .sticky-header .container .action-buttons.mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 1027px) {
+    .sticky-header .container .action-buttons.desktop {
+        display: none;
+    }
+}
