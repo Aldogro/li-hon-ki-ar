@@ -15,6 +15,7 @@
     border-bottom: none;
     background-color: transparent;
     box-shadow: none;
+    backdrop-filter: blur(20px);
 }
 
 .sticky-header .container {

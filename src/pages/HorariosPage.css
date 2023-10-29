@@ -1,0 +1,21 @@
+table {
+    box-sizing: border-box;
+    max-width: 1200px;
+    border-radius: 8px;
+    border: 3px solid var(--danger);
+    border-collapse: unset;
+}
+
+table tr th {
+    color: var(--danger);
+    padding: 20px;
+    font-size: 20px;
+    line-height: 24px;
+    min-width: 150px;
+}
+table tr th:first-child {
+    border-top-left-radius: 8px;
+}
+table tr th:last-child {
+    border-top-right-radius: 8px;
+}

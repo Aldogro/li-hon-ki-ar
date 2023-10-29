@@ -1,0 +1,13 @@
+.table-cell {
+    background-color: var(--danger);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-cell span .name {
+    border: 1px solid red;
+}

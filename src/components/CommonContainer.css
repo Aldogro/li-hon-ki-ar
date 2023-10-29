@@ -1,0 +1,23 @@
+.common-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: auto;
+}
+
+.common-content {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 40px 0px;
+}
+
+.common-footer {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    color: var(--main-bg-color);
+    background-color: var(--main-font-color);
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+}
