@@ -1,5 +1,6 @@
 .table-cell {
     background-color: var(--danger);
+    color: var(--main-bg-color);
     border-radius: 8px;
     padding: 20px;
     display: flex;
