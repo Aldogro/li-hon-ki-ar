@@ -1,13 +1,37 @@
 .table-cell {
-    background-color: var(--danger);
+    background-color: var(--header-bg);
+    color: var(--main-bg-color);
+    background-image: url('../assets/svg/pattern.svg');
     border-radius: 8px;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-.table-cell span .name {
-    border: 1px solid red;
+.table-cell .cell-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-cell.wing-chun {
+    background-color: var(--wing-chun);
+}
+.table-cell.sanda {
+    background-color: var(--main-font-color);
+}
+.table-cell.hung-gar {
+    background-color: var(--hung-gar);
+}
+.table-cell.funcional {
+    background-color: var(--funcional);
+}
+.table-cell .cell-wrapper .name {
+    color: var(--main-bg-color);
+    white-space: nowrap;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+}
+.table-cell .cell-wrapper .hours {
+    color: var(--main-bg-color);
 }

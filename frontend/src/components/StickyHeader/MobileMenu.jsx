@@ -24,6 +24,11 @@ const MobileMenu = () => {
                             </Link>
                         </div>
                     ))}
+                    <div className="link-item">
+                        <Link to="/ingreso" onClick={() => setOpen(false)}>
+                            Ingreso
+                        </Link>
+                    </div>
                 </div>
                 <img className="mobile-menu-logo" src={logo} alt="logo" />
                 <div className="mobile-menu-footer">

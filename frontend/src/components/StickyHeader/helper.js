@@ -25,6 +25,10 @@ export const links = [
         name: 'Funcional'
     },
     {
+        path: '/filiales',
+        name: 'Filiales',
+    },
+    {
         path: '/instructores',
         name: 'Instructores',
     },
