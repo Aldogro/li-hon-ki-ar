@@ -1,6 +1,8 @@
 .sticky-header {
     padding: 20px;
+    z-index: 5;
     background-color: var(--header-bg);
+    background-image: url('../../assets/svg/pattern.svg');
     min-height: var(--sticky-header-height);
     position: sticky;
     top: 0;
@@ -54,6 +56,7 @@
 }
 .desktop-menu .sections .link-item a {
     cursor: pointer;
+    white-space: nowrap;
     font-weight: 600;
     font-size: 20px;
     text-decoration: none;
@@ -63,16 +66,24 @@
 .mobile-menu-open {
     padding: 20px;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
     top: 0;
     left: 0;
     background-color: white;
     height: 100vh;
     width: 100vw;
+    overflow-y: auto;
 }
 .mobile-menu-open .close-icon {
+    z-index: 2;
+    position: absolute;
     cursor: pointer;
     display: flex;
     justify-content: flex-end;
+    right: 20px;
 }
 .mobile-menu-open .mobile-menu-logo {
     opacity: 0.1;
@@ -97,9 +108,9 @@
     color: var(--main-font-color);
 }
 .mobile-menu-footer {
-    position: absolute;
     display: flex;
     flex-direction: column;
+    align-self: flex-end;
     align-items: flex-end;
     gap: 20px;
     width: calc(100% - 40px);

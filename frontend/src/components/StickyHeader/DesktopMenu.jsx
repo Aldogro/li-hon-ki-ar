@@ -11,13 +11,16 @@ const DesktopMenu = () => {
                     <a
                         className="contact-item"
                         href={contact.url}
+                        key={contact.url}
                     >
                         {contact.content}
                     </a>
                 ))}
-                <div className="contact-item">
-                    <MembersIcon height={30} width={30} />
-                </div>
+                <Link to="/ingreso">
+                    <div className="contact-item">
+                        <MembersIcon height={30} width={30} />
+                    </div>
+                </Link>
             </div>
             <div className="sections">
                 {links.map((link) => (

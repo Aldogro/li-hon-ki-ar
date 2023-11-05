@@ -4,75 +4,99 @@ export const days = [
     'Miércoles',
     'Jueves',
     'Viernes',
-    'Sábado',
-    'Domingo',
+    'Sábado'
 ];
 
 export const schedule = [
     {
         day: 'Lunes',
+        timeIn: '09:00',
+        timeOut: '10:30',
+        name: 'Funcional',
+        type: 'funcional',
+    },
+    {
+        day: 'Miércoles',
+        timeIn: '09:00',
+        timeOut: '10:30',
+        name: 'Funcional',
+        type: 'funcional',
+    },
+    {
+        day: 'Viernes',
+        timeIn: '09:00',
+        timeOut: '10:30',
+        name: 'Funcional',
+        type: 'funcional',
+    },
+    {
+        day: 'Lunes',
         timeIn: '19:00',
         timeOut: '20:30',
-        name: 'Wing Chun'
+        name: 'Wing Chun',
+        type: 'wing-chun',
     },
     {
         day: 'Miércoles',
         timeIn: '19:00',
         timeOut: '20:30',
-        name: 'Wing Chun'
+        name: 'Wing Chun',
+        type: 'wing-chun',
     },
     {
         day: 'Sábado',
         timeIn: '10:30',
         timeOut: '12:00',
-        name: 'Wing Chun'
+        name: 'Wing Chun',
+        type: 'wing-chun',
     },
     {
         day: 'Lunes',
-        timeIn: '17:30',
+        timeIn: '17:45',
         timeOut: '19:00',
-        name: 'Sanda'
+        name: 'Sanda',
+        type: 'sanda',
     },
     {
         day: 'Miércoles',
-        timeIn: '17:30',
+        timeIn: '17:45',
         timeOut: '19:00',
-        name: 'Sanda'
+        name: 'Sanda',
+        type: 'sanda',
     },
     {
         day: 'Viernes',
-        timeIn: '17:30',
+        timeIn: '17:45',
         timeOut: '19:00',
-        name: 'Sanda'
+        name: 'Sanda',
+        type: 'sanda',
     },
-];
-
-export const hungGarSchedule = [
-    {
-        day: 'Martes',
-        timeIn: '19:00',
-        timeOut: '20:30',
-        name: 'Hung Gar',
-    },
-    {
-        day: 'Jueves',
-        timeIn: '19:00',
-        timeOut: '20:30',
-        name: 'Hung Gar',
-    },
-];
-
-export const hungGarKidsSchedule = [
     {
         day: 'Martes',
         timeIn: '18:00',
         timeOut: '19:00',
         name: 'Hung Gar Niños',
+        type: 'hung-gar',
     },
     {
         day: 'Jueves',
         timeIn: '18:00',
         timeOut: '19:00',
         name: 'Hung Gar Niños',
+        type: 'hung-gar',
+    },
+    {
+        day: 'Martes',
+        timeIn: '19:00',
+        timeOut: '20:30',
+        name: 'Hung Gar',
+        type: 'hung-gar',
+    },
+    {
+        day: 'Jueves',
+        timeIn: '19:00',
+        timeOut: '20:30',
+        name: 'Hung Gar',
+        type: 'hung-gar',
     },
 ];
