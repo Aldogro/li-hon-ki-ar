@@ -1,0 +1,23 @@
+.filiales-container {
+    max-width: 1200px;
+    margin: 0px auto;
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filiales-container .filial-card {
+    background-color: var(--header-bg);
+    background-image: url('../assets/svg/pattern.svg');
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    border-radius: 8px;
+    flex-direction: column;
+    min-width: 350px;
+    align-items: center;
+    gap: 8px;
+}
+.filiales-container .filial-card h4 {
+    opacity: 0.7;
+}

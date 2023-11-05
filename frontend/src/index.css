@@ -4,6 +4,9 @@
   --header-bg: #33333333;
   --box-shadow-color: #aaaaaa;
   --danger: #881c1c;
+  --hung-gar: #c91b29;
+  --wing-chun: green;
+  --funcional: #576b95;
   --sticky-header-height: 60px;
 }
 
@@ -11,6 +14,8 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  text-decoration: none;
+  color: var(--main-font-color);
 }
 
 body {
