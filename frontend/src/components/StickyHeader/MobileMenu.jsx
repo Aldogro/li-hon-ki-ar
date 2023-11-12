@@ -34,6 +34,7 @@ const MobileMenu = () => {
                 <div className="mobile-menu-footer">
                     {contactLinks.map((contact) => (
                         <a
+                            key={contact.url}
                             className="contact-item"
                             href={contact.url}
                             target="_blank"

@@ -1,0 +1,8 @@
+.display-error {
+    margin: 10px 0px;
+    background-color: var(--danger);
+    color: var(--main-bg-color);
+    font-weight: 600;
+    font-size: 16px;
+    padding: 20px;
+}
