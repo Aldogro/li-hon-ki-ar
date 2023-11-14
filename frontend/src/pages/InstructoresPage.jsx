@@ -18,15 +18,21 @@ const InstructorCard = ({ instructor }) => {
 const InstructoresPage = () => {
     const instructores = [
         {
-            name: 'Maximiliano Gómez',
+            name: 'Profesor Maximiliano Gómez',
             photo: empty,
             place: 'Kwoon Central',
             activities: 'Sanda'
         },
         {
-            name: 'Instructor Wally',
+            name: 'Profesor Wally',
             photo: empty,
             place: 'Kwoon Central',
+            activities: 'Hung Gar',
+        },
+        {
+            name: 'Profesor Nahuel Campanari',
+            photo: empty,
+            place: 'Comarca Andina - El Hoyo - Chubut',
             activities: 'Hung Gar',
         },
         {
@@ -36,9 +42,9 @@ const InstructoresPage = () => {
             activities: 'Hung Gar',
         },
         {
-            name: 'Instructor Nahuel',
+            name: 'Instructor Ignacio Bruvera',
             photo: empty,
-            place: 'La Plata - La Patagonia',
+            place: 'La Plata - Buenos Aires',
             activities: 'Hung Gar',
         },
     ];
@@ -54,7 +60,7 @@ const InstructoresPage = () => {
                     activities: 'Hung Gar - Wing Chun',
                 }} />
                 {instructores.map((instructor) => (
-                    <InstructorCard instructor={instructor} />
+                    <InstructorCard instructor={instructor} key={instructor.name} />
                 ))}
             </div>
         </CommonContainer>
