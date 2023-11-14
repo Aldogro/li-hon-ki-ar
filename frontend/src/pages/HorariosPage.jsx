@@ -32,7 +32,7 @@ const HorariosPage = () => {
                     </thead>
                     <tbody>
                         {Object.keys(parsedSchedule).sort().map((key) => (
-                            <tr key={parsedSchedule[key]}>
+                            <tr key={key}>
                                 {days.map((day) => {
                                     const today = parsedSchedule[key].find((practice) => practice.day === day);
                                     return <TableCell key={`${today}${day}`} today={today} />
