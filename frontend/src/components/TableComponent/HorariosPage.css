@@ -1,0 +1,29 @@
+.horarios-container {
+    max-width: 100vw;
+    padding: 0px 20px;
+    overflow-x: auto;
+}
+
+table {
+    margin-top: 20px;
+    box-sizing: border-box;
+    max-width: 1200px;
+    border-radius: 8px;
+    border: 3px solid var(--main-font-color);
+    background-color: var(--header-bg);
+    border-collapse: unset;
+}
+
+table tr th {
+    color: var(--main-font-color);
+    padding: 20px;
+    font-size: 20px;
+    line-height: 24px;
+    min-width: 150px;
+}
+table tr th:first-child {
+    border-top-left-radius: 8px;
+}
+table tr th:last-child {
+    border-top-right-radius: 8px;
+}

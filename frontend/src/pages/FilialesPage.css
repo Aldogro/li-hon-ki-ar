@@ -1,7 +1,9 @@
 .filiales-container {
     max-width: 1200px;
     margin: 0px auto;
+    padding: 0px 20px;
     display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     gap: 10px;
 }
@@ -14,10 +16,15 @@
     display: flex;
     border-radius: 8px;
     flex-direction: column;
-    min-width: 350px;
     align-items: center;
     gap: 8px;
 }
-.filiales-container .filial-card h4 {
+.filiales-container .filial-card, h4 {
     opacity: 0.7;
+}
+
+@media (max-width: 1027px) {
+    .filiales-container {
+        grid-template-columns: 1fr;
+    }
 }

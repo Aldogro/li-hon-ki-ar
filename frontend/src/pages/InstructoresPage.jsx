@@ -1,64 +1,38 @@
+import { Link } from 'react-router-dom';
 import CommonContainer from '../components/CommonContainer';
-import empty from '../assets/webp/img-placeholder.webp';
 import './InstructoresPage.css';
+import { activities, instructores } from '../information';
 
 const InstructorCard = ({ instructor }) => {
+    const getActivityName = (activity) => {
+        return activities.find((a) => a.activityId === activity).name;
+    };
+
     return (
-        <div className="instructor-card">
-            <img src={instructor.photo} alt={instructor.name} />
-            <div>
-                <h3>{instructor.name}</h3>
-                <h4>{instructor.place}</h4>
-                <h5>{instructor.activities}</h5>
+        <Link to={`/instructores/${instructor.instructorId}`}>
+            <div className="instructor-card">
+                <div className="instructor-card-photo">
+                    <img src={instructor.photo} alt={instructor.name} />
+                </div>
+                <div>
+                    <h3>{instructor.name}</h3>
+                    <h4>{instructor.place}</h4>
+                    <div className="instructor-activities">
+                        {instructor.activities.map((activity) => (
+                            <span key={activity}>{getActivityName(activity)}</span>
+                        ))}
+                    </div>
+                </div>
             </div>
-        </div>
+        </Link>
     );
 };
 
 const InstructoresPage = () => {
-    const instructores = [
-        {
-            name: 'Profesor Maximiliano Gómez',
-            photo: empty,
-            place: 'Kwoon Central',
-            activities: 'Sanda'
-        },
-        {
-            name: 'Profesor Wally',
-            photo: empty,
-            place: 'Kwoon Central',
-            activities: 'Hung Gar',
-        },
-        {
-            name: 'Profesor Nahuel Campanari',
-            photo: empty,
-            place: 'Comarca Andina - El Hoyo - Chubut',
-            activities: 'Hung Gar',
-        },
-        {
-            name: 'Instructor José Luis Cristaldo Bustamante',
-            photo: empty,
-            place: 'Kwoon Central - Otro Lugar',
-            activities: 'Hung Gar',
-        },
-        {
-            name: 'Instructor Ignacio Bruvera',
-            photo: empty,
-            place: 'La Plata - Buenos Aires',
-            activities: 'Hung Gar',
-        },
-    ];
-
     return (
         <CommonContainer>
             <h1>Instructores</h1>
             <div className="instructores-container">
-                <InstructorCard instructor={{
-                    name: 'Sifu Fabián González',
-                    photo: empty,
-                    place: 'Kwoon Central',
-                    activities: 'Hung Gar - Wing Chun',
-                }} />
                 {instructores.map((instructor) => (
                     <InstructorCard instructor={instructor} key={instructor.name} />
                 ))}

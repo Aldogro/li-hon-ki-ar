@@ -1,14 +1,11 @@
-import CommonContainer from '../components/CommonContainer';
-import TableCell from '../components/TableComponent/TableCell';
-import { days } from './helper';
-import { centralKwoonSchedule } from '../information';
+import TableCell from './TableCell';
+import { days } from '../../pages/helper';
 import './HorariosPage.css';
 
-const HorariosPage = () => {
-    
+const TableComponent = ({ schedule }) => {
     const getSchedule = () => {
         const scheduleGroupedByHour = {}
-        centralKwoonSchedule.forEach((item) => {
+        schedule.forEach((item) => {
             if (scheduleGroupedByHour[item.timeIn]) {
                 scheduleGroupedByHour[item.timeIn] = [...scheduleGroupedByHour[item.timeIn], item]
             } else {
@@ -20,8 +17,7 @@ const HorariosPage = () => {
     
     const parsedSchedule = getSchedule();
     return (
-        <CommonContainer>
-            <h1>Horarios</h1>
+        schedule.length ? (
             <div className="horarios-container">
                 <table>
                     <thead className="table-header">
@@ -43,8 +39,12 @@ const HorariosPage = () => {
                     </tbody>
                 </table>
             </div>
-        </CommonContainer>
+        ) : (
+            <div className="horarios-container-soon">
+                <h3>Pronto publicaremos los horarios</h3>
+            </div>
+        )
     );
 };
 
-export default HorariosPage;
+export default TableComponent;
