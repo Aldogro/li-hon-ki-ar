@@ -9,13 +9,13 @@ const FilialesPage = () => {
             <h1>Filiales</h1>
             <div className="filiales-container">
                 {filiales.map((filial) => (
-                    <Link to={`/filiales/${filial.filialId}`}>
-                        <div className="filial-card" key={filial.name}>
+                    <Link key={filial.name} to={`/filiales/${filial.filialId}`}>
+                        <div className="filial-card">
                             <h3>{filial.name}</h3>
                             <h4>{filial.activities}</h4>
-                            <a href={filial.addressLink} target="_blank" rel="noopener noreferrer">
+                            <span href={filial.addressLink} target="_blank" rel="noopener noreferrer">
                                 <h4>{filial.address}</h4>
-                            </a>
+                            </span>
                             <h4>Director: {filial.director}</h4>
                         </div>
                     </Link>

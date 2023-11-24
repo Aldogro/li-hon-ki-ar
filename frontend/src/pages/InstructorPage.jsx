@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { instructores } from '../information';
 import CommonContainer from '../components/CommonContainer';
+import { Link } from 'react-router-dom';
 import './InstructorPage.css';
 
 const InstructorPage = () => {
@@ -14,7 +15,11 @@ const InstructorPage = () => {
                     <img src={instructor.photo} alt="instructor portrait" />
                 </div>
                 <h2 className="instructor-name">{instructor.name}</h2>
-                <h3 className="instructor-place">{instructor.place}</h3>
+                {instructor.places.map((place) => (
+                    <Link key={place.filialId} to={`/filiales/${place.filialId}`}>
+                        <h3 className="instructor-place">{place.name}</h3>
+                    </Link>
+                ))}
                 <p className="instructor-bio" dangerouslySetInnerHTML={{ __html: instructor.bio }}></p>
             </div>
         </CommonContainer>

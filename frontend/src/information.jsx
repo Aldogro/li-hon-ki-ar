@@ -1,70 +1,80 @@
 import empty from './assets/webp/img-placeholder.webp';
 import joseFace from './assets/jpeg/jose-face.jpeg';
 
+const hungGar = {
+    activityId: 'hung-gar',
+    name: 'Hung Gar',
+    logo: empty,
+};
+const wingChun = {
+    activityId: 'wing-chun',
+    name: 'Wing Chun',
+    logo: empty,
+};
+const sanda = {
+    activityId: 'sanda',
+    name: 'Sanda',
+    logo: empty,
+}
+const funcional = {
+    activityId: 'funcional',
+    name: 'Funcional',
+    logo: empty,
+}
+
 export const activities = [
-    {
-        activityId: 'hung-gar',
-        name: 'Hung Gar',
-        logo: empty,
-    },
-    {
-        activityId: 'wing-chun',
-        name: 'Wing Chun',
-        logo: empty,
-    },
-    {
-        activityId: 'sanda',
-        name: 'Sanda',
-        logo: empty,
-    },
-    {
-        activityId: 'funcional',
-        name: 'Funcional',
-        logo: empty,
-    },
+    hungGar,
+    wingChun,
+    sanda,
+    funcional,
 ];
 
+const kwoonCentral = {
+    filialId: 'kwoon-central',
+    name: 'Kwoon Central',
+    city: 'Rosario',
+    address: 'Laprida 2907 - Rosario - Santa Fe',
+    addressLink: 'https://maps.app.goo.gl/WAuqRqqVbcR9MvRFA',
+    activities: 'Hung Gar - Wing Chun - Sanda - Funcional',
+    director: 'Sifu Fabián González',
+    instructorId: 'sifu-fabian-gonzalez',
+};
+const filialLaPlata = {
+    filialId: 'filial-la-plata',
+    name: 'Filial La Plata, Bs. As.',
+    city: 'La Plata',
+    address: 'Club S y D San Martín, Calle 119 entre 530 y 531 Tolosa',
+    addressLink: 'https://maps.app.goo.gl/o4X1RapUCv5rTGTU6',
+    activities: 'Hung Gar',
+    director: 'Instructor Ignacio Bruvera',
+    instructorId: 'instructor-ignacio-bruvera',
+};
+const filialComarcaAndina = {
+    filialId: 'filial-comarca-andina',
+    name: 'Filial Comarca Andina - El Hoyo',
+    city: 'El Hoyo',
+    address: 'Corfo El Hoyo - Chubut',
+    addressLink: 'https://maps.app.goo.gl/UHhPPsScdT2NYgvdA',
+    activities: 'Hung Gar - Chi Kung - Defensa Personal',
+    director: 'Profesor Nahuel Campanari',
+    instructorId: 'prof-nahuel-campanari',
+};
+const filialRosarioZonaSur = {
+    filialId: 'filial-rosario-zona-sur',
+    name: 'Filial Rosario (Zona Sur)',
+    city: 'Rosario',
+    address: 'España 4588 esquina Coulin (Espacio Iluminarte)',
+    addressLink: 'https://maps.app.goo.gl/LnCNpjvtTTTSVqQWA',
+    activities: 'Hung Gar',
+    director: 'Instructor José Luis Cristaldo Bustamante',
+    instructorId: 'instructor-jose-luis-cb',
+};
+
 export const filiales = [
-    {
-        filialId: 'kwoon-central',
-        name: 'Kwoon Central',
-        city: 'Rosario',
-        address: 'Laprida 2907 - Rosario - Santa Fe',
-        addressLink: 'https://maps.app.goo.gl/WAuqRqqVbcR9MvRFA',
-        activities: 'Hung Gar - Wing Chun - Sanda - Funcional',
-        director: 'Sifu Fabián González',
-        instructorId: 'sifu-fabian-gonzalez',
-    },
-    {
-        filialId: 'filial-la-plata',
-        name: 'Filial La Plata, Bs. As.',
-        city: 'La Plata',
-        address: 'Club S y D San Martín, Calle 119 entre 530 y 531 Tolosa',
-        addressLink: 'https://maps.app.goo.gl/o4X1RapUCv5rTGTU6',
-        activities: 'Hung Gar',
-        director: 'Instructor Ignacio Bruvera',
-        instructorId: 'instructor-ignacio-bruvera',
-    },
-    {
-        filialId: 'filial-comarca-andina',
-        name: 'Filial Comarca Andina - El Hoyo',
-        city: 'El Hoyo',
-        address: 'Corfo El Hoyo - Chubut',
-        addressLink: 'https://maps.app.goo.gl/UHhPPsScdT2NYgvdA',
-        activities: 'Hung Gar - Chi Kung - Defensa Personal',
-        director: 'Profesor Nahuel Campanari',
-        instructorId: 'prof-nahuel-campanari',
-    },
-    {
-        filialId: 'filial-rosario-zona-sur',
-        name: 'Filial Rosario (Zona Sur)',
-        city: 'Rosario',
-        address: 'España 4588 esquina Coulin (Espacio Iluminarte)',
-        addressLink: 'https://maps.app.goo.gl/LnCNpjvtTTTSVqQWA',
-        activities: 'Hung Gar',
-        director: 'Instructor José Luis Cristaldo Bustamante',
-        instructorId: 'instructor-jose-luis-cb',
-    },
+    kwoonCentral,
+    filialLaPlata,
+    filialComarcaAndina,
+    filialRosarioZonaSur,
 ];
 
 export const instructores = [
@@ -78,8 +88,8 @@ export const instructores = [
             <i>Más 40 años de práctica ininterrumpida.</i>
         `,
         photo: empty,
-        place: 'Kwoon Central',
-        activities: ['hung-gar', 'wing-chun'],
+        places: [kwoonCentral],
+        activities: [hungGar, wingChun],
     },
     {
         instructorId: 'prof-maxi-gomez',
@@ -87,8 +97,8 @@ export const instructores = [
         yearsOfPractice: 30,
         bio: '',
         photo: empty,
-        place: 'Kwoon Central',
-        activities: ['sanda'],
+        places: [kwoonCentral],
+        activities: [sanda],
     },
     {
         instructorId: 'prof-walter-mansilla',
@@ -96,8 +106,8 @@ export const instructores = [
         yearsOfPractice: 20,
         bio: '',
         photo: empty,
-        place: 'Kwoon Central',
-        activities: ['hung-gar'],
+        places: [kwoonCentral],
+        activities: [hungGar],
     },
     {
         instructorId: 'prof-nahuel-campanari',
@@ -105,8 +115,8 @@ export const instructores = [
         yearsOfPractice: 20,
         bio: '',
         photo: empty,
-        place: 'Comarca Andina - El Hoyo - Chubut',
-        activities: ['hung-gar'],
+        places: [filialComarcaAndina],
+        activities: [hungGar],
     },
     {
         instructorId: 'instructor-jose-luis-cb',
@@ -118,11 +128,11 @@ export const instructores = [
             <p>Con nueve años ya de práctica, llevo cuatro impartiendo clases en el turno Niños en el Kwoon Central y un año en turno mixto (niños y adultos) en turno nocturno a mi cargo en Iluminarte.</p>
             <p>Por otra parte, participé en torneos desde 2017, obteniendo en tal año el Primer puesto tanto en formas de manos (Gung Ji Foo Hoo Kuen) como de armas (Kunlun Gim) en el torneo Garra de Águila, reiterando la participación en 2022, obteniendo asimismo idénticos puestos en formas de manos (Foo Hook Seung Yin Kuen) cuanto en forma de armas (Kunlun Gim), y participando a su vez en 2023 en los Juegos CREAR en categoría mayores de 41 años, con forma de manos Lau Xing Kuen y forma de armas Kunlun Gim.
             <p>Cabe señalar que en el ámbito profesional me desempeño como abogado egresado de la Universidad Nacional de Rosario desde Agosto de 2015 en las áreas civil, comercial y laboral.</p>
-            <p>Doy clases de Hung Gar para niños los días martes y jueves de 18:00hs a 19hs en el <a href="/filiales/kwoon-central">Kwoon Central</a>.</p>
+            <p>Doy clases de Hung Gar para niños los días martes y jueves de 18:00hs a 19:00hs en el <a href="/filiales/kwoon-central">Kwoon Central</a>.</p>
         `,
         photo: joseFace,
-        place: 'Kwoon Central - Filial Rosario (Zona Sur)',
-        activities: ['hung-gar'],
+        places: [kwoonCentral, filialRosarioZonaSur],
+        activities: [hungGar],
     },
     {
         instructorId: 'instructor-ignacio-bruvera',
@@ -130,8 +140,8 @@ export const instructores = [
         yearsOfPractice: 10,
         bio: '',
         photo: empty,
-        place: 'La Plata - Buenos Aires',
-        activities: ['hung-gar'],
+        places: [filialLaPlata],
+        activities: [hungGar],
     },
 ];
 
@@ -324,13 +334,13 @@ export const filialSurSchedule = [
     },
 ];
 
-export const filialComarcaAndina = [];
+export const filialComarcaAndinaSchedule = [];
 
-export const filialLaPlata = [];
+export const filialLaPlataSchedule = [];
 
 export const schedules = {
     'kwoon-central': centralKwoonSchedule,
-    'filial-la-plata': filialLaPlata,
-    'filial-comarca-andina': filialComarcaAndina,
+    'filial-la-plata': filialLaPlataSchedule,
+    'filial-comarca-andina': filialComarcaAndinaSchedule,
     'filial-rosario-zona-sur': filialSurSchedule,
 }

@@ -5,7 +5,7 @@ import { activities, instructores } from '../information';
 
 const InstructorCard = ({ instructor }) => {
     const getActivityName = (activity) => {
-        return activities.find((a) => a.activityId === activity).name;
+        return activities.find((a) => a.activityId === activity.activityId).name;
     };
 
     return (
@@ -16,10 +16,12 @@ const InstructorCard = ({ instructor }) => {
                 </div>
                 <div>
                     <h3>{instructor.name}</h3>
-                    <h4>{instructor.place}</h4>
+                    {instructor.places.map((place) => (
+                        <h4 key={place.name}>{place.name}</h4>
+                    ))}
                     <div className="instructor-activities">
                         {instructor.activities.map((activity) => (
-                            <span key={activity}>{getActivityName(activity)}</span>
+                            <span key={activity.activityId}>{getActivityName(activity)}</span>
                         ))}
                     </div>
                 </div>
