@@ -31,5 +31,6 @@
     text-align: left;
 }
 .instructor-bio p {
-    margin: 7px 0px;
+    margin: 14px 0px;
+    text-align: justify;
 }
