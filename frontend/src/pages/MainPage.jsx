@@ -1,12 +1,17 @@
 import './MainPage.css';
-import UnderConstruction from  '../components/UnderConstruction';
+import empty from '../assets/svg/landscape-placeholder.svg';
+import CommonContainer from '../components/CommonContainer';
 
 const MainPage = () => {
     return (
-        <div className="main-page">
-            <h1>Página Principal</h1>
-            <UnderConstruction />
-        </div>
+        <CommonContainer>
+            <div className="full-width-section">
+                <div className="school-banner-container">
+                    <h1>Instituto Li Hon Ki</h1>
+                    <img src={empty} alt="school-banner" />
+                </div>
+            </div>
+        </CommonContainer>
     );
 };
 
