@@ -2,6 +2,7 @@ import empty from './assets/webp/img-placeholder.webp';
 import sifuFace from './assets/jpeg/sifu-face.jpeg';
 import joseFace from './assets/jpeg/jose-face.jpeg';
 import ignacioBruFace from './assets/jpeg/ignacio-bru-face.jpeg';
+import nahuelCampanariFace from './assets/jpeg/nahuel-campanari-face.jpeg';
 
 const hungGar = {
     activityId: 'hung-gar',
@@ -390,9 +391,14 @@ const profWalterMansilla = {
 const profNahuelCampanari = {
     instructorId: 'prof-nahuel-campanari',
     name: 'Profesor Nahuel Campanari',
-    yearsOfPractice: 20,
-    bio: '',
-    photo: empty,
+    yearsOfPractice: 25,
+    bio: `
+        <p>Profesor Nahuel Campanari</p>
+        <p>Dedicado a la práctica y difusión del Kung Fu Tradicional desde hace más de 25 años.</p>
+        <p>Viajó en 2 oportunidades a China donde pudo capacitarse en Danza de León. Además es Instructor de Defensa Personal Policial y Técnico Superior en Entrenamiento Deportivo.</p>
+        <p>Actualmente dicta clases de Hung Gar en <a href="/filiales/filial-comarca-andina">Camino del Bosque #139, Golondrinas (Chubut)</a></p>
+    `,
+    photo: nahuelCampanariFace,
     places: [filialComarcaAndina],
     activities: [hungGar],
 };
@@ -640,7 +646,22 @@ export const filialSurSchedule = [
         type: 'hung-gar',
     },
 ];
-export const filialComarcaAndinaSchedule = [];
+export const filialComarcaAndinaSchedule = [
+    {
+        day: 'Martes',
+        timeIn: '08:00',
+        timeOut: '9:30',
+        name: 'Hung Gar',
+        type: 'hung-gar',
+    },
+    {
+        day: 'Jueves',
+        timeIn: '08:00',
+        timeOut: '09:30',
+        name: 'Hung Gar',
+        type: 'hung-gar',
+    },
+];
 export const filialLaPlataSchedule = [
     {
         day: 'Martes',
