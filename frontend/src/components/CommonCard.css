@@ -1,0 +1,5 @@
+.common-card__container {
+    background-color: var(--header-bg);
+    padding: 20px;
+    border-radius: 8px;
+}
