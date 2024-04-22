@@ -26,3 +26,9 @@ table tr th:first-child {
 table tr th:last-child {
     border-top-right-radius: 8px;
 }
+
+@media (max-width: 1027px) {
+    .horarios-container {
+        padding: 12px;
+    }
+}

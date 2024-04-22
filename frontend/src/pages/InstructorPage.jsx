@@ -9,7 +9,7 @@ const InstructorPage = () => {
     const instructor = instructores.find((instructor) => instructor.instructorId === instructorId);
 
     return (
-        <CommonContainer>
+        <CommonContainer id="top">
             <div className="instructor-container">
                 <div className="instructor-photo">
                     <img src={instructor.photo} alt="instructor portrait" />

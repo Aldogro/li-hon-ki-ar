@@ -370,15 +370,15 @@ const sifuFabianGonzalez = {
     places: [kwoonCentral],
     activities: [hungGar, wingChun],
 };
-const profMaxiGomez = {
-    instructorId: 'prof-maxi-gomez',
-    name: 'Profesor Maximiliano Gómez',
-    yearsOfPractice: 30,
-    bio: '',
-    photo: empty,
-    places: [kwoonCentral],
-    activities: [sanda],
-};
+// const profMaxiGomez = {
+//     instructorId: 'prof-maxi-gomez',
+//     name: 'Profesor Maximiliano Gómez',
+//     yearsOfPractice: 30,
+//     bio: '',
+//     photo: empty,
+//     places: [kwoonCentral],
+//     activities: [sanda],
+// };
 const profWalterMansilla = {
     instructorId: 'prof-walter-mansilla',
     name: 'Profesor Walter Mansilla',
@@ -451,7 +451,7 @@ const mariaPaulaPertile = {
 };
 export const instructores = [
     sifuFabianGonzalez,
-    profMaxiGomez,  
+    //profMaxiGomez,  
     profWalterMansilla,
     profNahuelCampanari,  
     profJoseLuis,

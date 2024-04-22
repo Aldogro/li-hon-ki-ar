@@ -1,8 +1,26 @@
-.hung-gar-page-container {
-    padding-top: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
+h3 {
+    font-size: var(--subtitle-2-size);
+    color: var(--main-font-color);
+    margin: 24px 0px 8px;
+}
+p {
+    color: var(--main-font-color);
+    font-size: var(--paragraph-size);
+    margin: 8px 0px;
+}
+ul {
+    margin: 16px 0px;
+    padding-left: 48px;
+}
+li {
+    font-size: var(--paragraph-size);
+}
+li::marker {
+    content: '\262F';
+}
+
+@media (max-width: 1027px) {
+    .common-content h3,p,li {
+        padding: 0px 24px;
+    }
 }

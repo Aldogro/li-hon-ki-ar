@@ -1,5 +1,6 @@
 :root {
   --main-bg-color: #ffffff;
+  --lightgray: #cccccc;
   --main-font-color: #333333;
   --main-font-color-light: #666666;
   --header-bg: #33333333;
@@ -9,6 +10,10 @@
   --wing-chun: green;
   --funcional: #576b95;
   --sticky-header-height: 60px;
+  --title-size: 2rem;
+  --subtitle-1-size: 1.6rem;
+  --subtitle-2-size: 1.4rem;
+  --paragraph-size: 1.2rem;
 }
 
 * {

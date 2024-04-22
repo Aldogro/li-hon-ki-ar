@@ -5,7 +5,11 @@
 }
 
 .school-banner-container {
-    width: 100vw;
+    width: calc(100vw - 18px);
+    background-image: url('../assets/jpeg/monumento.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 60%;
     background-color: #cccccc;
     min-height: 400px;
     display: flex;
@@ -16,10 +20,37 @@
 
 .school-banner-container h1 {
     color: white;
+    margin-top: 220px;
     text-shadow: 1px 1px 2px black, -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black;
 }
 
-.school-banner-container img {
-    height: 100px;
-    z-index: 1;
+.main-section {
+    margin-top: 40px;
+}
+
+.main-section.first {
+    padding: 40px 0px 0px;
+}
+
+.main-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-section__card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.separator {
+    margin: 40px 0px;
+    border-top: 2px solid var(--lightgray);
+}
+
+@media (max-width: 1027px) {
+    .main-section__card-container {
+        grid-template-columns: 1fr;
+        padding: 0px 10px;
+    }
 }
