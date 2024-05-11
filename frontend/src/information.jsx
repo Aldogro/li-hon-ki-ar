@@ -1,4 +1,11 @@
 import empty from './assets/webp/img-placeholder.webp';
+
+// LOGOS
+import { ReactComponent as LamJoLogo } from './assets/svg/hung-gar-lam-jo-logo.svg';
+import { ReactComponent as WingChunLogo } from './assets/svg/wing-chun.svg';
+import { ReactComponent as SandaLogo } from './assets/svg/sanda.svg';
+
+// IMAGES
 import sifuFace from './assets/jpeg/sifu-face.jpeg';
 import joseFace from './assets/jpeg/jose-face.jpeg';
 import ignacioBruFace from './assets/jpeg/ignacio-bru-face.jpeg';
@@ -7,29 +14,29 @@ import nahuelCampanariFace from './assets/jpeg/nahuel-campanari-face.jpeg';
 const hungGar = {
     activityId: 'hung-gar',
     name: 'Hung Gar',
-    logo: empty,
+    logo: LamJoLogo,
 };
 const wingChun = {
     activityId: 'wing-chun',
     name: 'Wing Chun',
-    logo: empty,
+    logo: WingChunLogo,
 };
 const sanda = {
     activityId: 'sanda',
     name: 'Sanda',
-    logo: empty,
+    logo: SandaLogo,
 }
-const funcional = {
-    activityId: 'funcional',
-    name: 'Funcional',
-    logo: empty,
-}
+// const funcional = {
+//     activityId: 'funcional',
+//     name: 'Funcional',
+//     logo: empty,
+// }
 
 export const activities = [
     hungGar,
     wingChun,
     sanda,
-    funcional,
+    // funcional,
 ];
 
 const kwoonCentral = {
@@ -432,23 +439,23 @@ const instructorIgnacioBruvera = {
     places: [filialLaPlata],
     activities: [hungGar],
 };
-const mariaPaulaPertile = {
-    instructorId: 'maria-paula-pertile',
-    name: 'María Paula Pertile',
-    yearsOfPractice: 0,
-    bio: `
-        <p>Mi nombre es María Paula Pertile tengo 37 años, soy Acompañante terapéutico/gerontológico, Instructora/entrenadora, realizó terapias alternativas.</p>
-        <p>Actualmente sigo practicando artes marciales como Sanda hace más de 10 años, Hung Gar alcancé 4to kap, 3 años de Brasilian Jiu Jitsu cinturón azul.</p>
-        <p>Brindo clases de entrenamiento funcional en el Instituto Li Hong Ki, <a href="/filiales/kwoon-central">Kwoon Central</a> y personalizados.</p>
-        <p>Formo parte de la escuela Li Hong ki hace ya unos 20 años siguiendo a mi mentor el <a href="/instructores/sifu-fabian-gonzalez">Sifu Fabián González</a>.</p>
-        <p>Las artes marciales ya son parte de mi vida me ayudaron a formar mi carácter y tener disciplina en lo que encare hoy dia.</p>
-        <p>Email: <a href="mailto:mariapaulapertile@gmail.com">mariapaulapertile@gmail.com</a></p>
-        <p>Celular: <a href="tel:+5493412143329">+54 9 341 2143329</a></p>
-    `,
-    photo: empty,
-    places: [kwoonCentral],
-    activities: [funcional]
-};
+// const mariaPaulaPertile = {
+//     instructorId: 'maria-paula-pertile',
+//     name: 'María Paula Pertile',
+//     yearsOfPractice: 0,
+//     bio: `
+//         <p>Mi nombre es María Paula Pertile tengo 37 años, soy Acompañante terapéutico/gerontológico, Instructora/entrenadora, realizó terapias alternativas.</p>
+//         <p>Actualmente sigo practicando artes marciales como Sanda hace más de 10 años, Hung Gar alcancé 4to kap, 3 años de Brasilian Jiu Jitsu cinturón azul.</p>
+//         <p>Brindo clases de entrenamiento funcional en el Instituto Li Hong Ki, <a href="/filiales/kwoon-central">Kwoon Central</a> y personalizados.</p>
+//         <p>Formo parte de la escuela Li Hong ki hace ya unos 20 años siguiendo a mi mentor el <a href="/instructores/sifu-fabian-gonzalez">Sifu Fabián González</a>.</p>
+//         <p>Las artes marciales ya son parte de mi vida me ayudaron a formar mi carácter y tener disciplina en lo que encare hoy dia.</p>
+//         <p>Email: <a href="mailto:mariapaulapertile@gmail.com">mariapaulapertile@gmail.com</a></p>
+//         <p>Celular: <a href="tel:+5493412143329">+54 9 341 2143329</a></p>
+//     `,
+//     photo: empty,
+//     places: [kwoonCentral],
+//     activities: [funcional]
+// };
 export const instructores = [
     sifuFabianGonzalez,
     //profMaxiGomez,  
@@ -456,7 +463,7 @@ export const instructores = [
     profNahuelCampanari,  
     profJoseLuis,
     instructorIgnacioBruvera,
-    mariaPaulaPertile,
+    //mariaPaulaPertile,
 ];
 
 export const centralKwoonSchedule = [

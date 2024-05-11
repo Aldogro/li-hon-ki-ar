@@ -20,10 +20,10 @@ export const links = [
         path: '/sanda',
         name: 'Sanda'
     },
-    {
-        path: '/funcional',
-        name: 'Funcional'
-    },
+    // {
+    //     path: '/funcional',
+    //     name: 'Funcional'
+    // },
     {
         path: '/filiales',
         name: 'Filiales',
@@ -32,10 +32,10 @@ export const links = [
         path: '/instructores',
         name: 'Instructores',
     },
-    {
-        path: '/horarios',
-        name: 'Horarios',
-    },
+    // {
+    //     path: '/horarios',
+    //     name: 'Horarios',
+    // },
 ];
 
 export const contactLinks = [

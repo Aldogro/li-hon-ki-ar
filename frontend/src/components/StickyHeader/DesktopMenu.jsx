@@ -1,5 +1,5 @@
-import { ReactComponent as MembersIcon } from '../../assets/svg/users.svg';
 import './StickyHeader.css';
+import { ReactComponent as MembersIcon } from '../../assets/svg/users.svg';
 import { Link } from 'react-router-dom';
 import { contactLinks, links } from './helper';
 
