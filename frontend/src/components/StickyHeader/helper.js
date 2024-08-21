@@ -16,14 +16,14 @@ export const links = [
         path: '/wing-chun',
         name: 'Wing Chun',
     },
-    {
-        path: '/sanda',
-        name: 'Sanda'
-    },
     // {
-    //     path: '/funcional',
-    //     name: 'Funcional'
+    //     path: '/sanda',
+    //     name: 'Sanda'
     // },
+    {
+        path: '/funcional',
+        name: 'Funcional'
+    },
     {
         path: '/filiales',
         name: 'Filiales',
