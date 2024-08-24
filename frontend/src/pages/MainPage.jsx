@@ -42,7 +42,7 @@ const MainPage = () => {
             <div className="separator"></div>
             <div className="main-section">
                 <h2>Filiales</h2>
-                <div className="main-section__card-container">
+                <div className="main-section__card-container col3">
                     {filiales.map((filial) => (
                         <CommonCard
                             key={filial.name}

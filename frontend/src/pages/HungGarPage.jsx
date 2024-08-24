@@ -1,3 +1,4 @@
+import './MainPage.css';
 import './HungGarPage.css';
 import CommonContainer from '../components/CommonContainer'
 

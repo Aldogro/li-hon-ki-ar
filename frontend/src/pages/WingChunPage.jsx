@@ -1,4 +1,5 @@
 import CommonContainer from '../components/CommonContainer';
+import './MainPage.css';
 import './WingChunPage.css';
 
 const WingChunPage = () => {

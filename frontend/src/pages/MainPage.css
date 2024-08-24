@@ -1,11 +1,12 @@
 .full-width-section {
-    margin: -40px;
     display: grid;
+    max-width: 100%;
     justify-content: center;
 }
 
 .school-banner-container {
-    width: calc(100vw - 18px);
+    width: 100vw;
+    margin-top: -40px;
     background-image: url('../assets/jpeg/monumento.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -53,7 +54,7 @@
 }
 
 @media (max-width: 1027px) {
-    .main-section__card-container {
+    .main-section__card-container.col3 {
         grid-template-columns: 1fr;
         padding: 0px 10px;
     }

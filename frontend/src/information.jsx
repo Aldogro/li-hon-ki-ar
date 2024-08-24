@@ -11,6 +11,7 @@ import sifuFace from './assets/jpeg/sifu-face.jpeg';
 import joseFace from './assets/jpeg/jose-face.jpeg';
 import ignacioBruFace from './assets/jpeg/ignacio-bru-face.jpeg';
 import nahuelCampanariFace from './assets/jpeg/nahuel-campanari-face.jpeg';
+import wallyFace from './assets/png/wally-face.png';
 
 const hungGar = {
     activityId: 'hung-gar',
@@ -29,7 +30,7 @@ const wingChun = {
 // }
 const funcional = {
     activityId: 'funcional',
-    name: 'Funcional',
+    name: 'Entrenamiento Funcional',
     logo: FunctionalLogo,
 }
 
@@ -391,8 +392,26 @@ const profWalterMansilla = {
     instructorId: 'prof-walter-mansilla',
     name: 'Profesor Walter Mansilla',
     yearsOfPractice: 20,
-    bio: '',
-    photo: empty,
+    bio: `
+        <p>
+            Mi camino en las artes marciales comenzó en abril de 2001, cuando tenía 14 años, bajo la guía de Maximiliano Gómez en el turno de los chicos.
+        </p>
+        <p>
+            Desde muy temprano, el arte marcial no solo se convirtió en una pasión, sino también en una disciplina que marcó mi vida. En 2004, decidí unirme al turno de adultos, ya que los exámenes más largos exigían más tiempo y dedicación.
+        </p>
+        <p>
+            A medida que avanzaba en mi entrenamiento, empecé a ayudar y cubrir al profesor Maximiliano Gómez, primero con los chicos y luego también en Sanda.
+            Esta experiencia fue fundamental para mi desarrollo, no solo como practicante, sino también como Instructor.
+        </p>
+        <p>
+            Con el tiempo, obtuve mi propio turno de chicos en el año 2015 y asumí la responsabilidad de liderar el turno de Sanda en 2019, en un horario propio.
+        </p>
+        <p>
+            Mi objetivo como instructor siempre ha sido compartir lo que las artes marciales me han dado: disciplina, respeto, y una continua superación personal.
+            Estoy comprometido en guiar a mis estudiantes en su propio camino, ayudándolos a alcanzar su máximo potencial tanto dentro como fuera del Kwoon.',
+        </p>
+    `,
+    photo: wallyFace,
     places: [kwoonCentral],
     activities: [hungGar],
 };
