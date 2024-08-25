@@ -1,6 +1,6 @@
 # Instituto Li Hon Ki's Website
 
-#### Video Demo:  <URL HERE>
+#### Video Demo:  https://youtu.be/M6KfuKSw6YQ
 
 #### Description:
 This is a website created for the Hung Gar Kung Fu Institute I've been part of for the last 16 years as a practitioner.
@@ -12,9 +12,12 @@ Firebase is used for users to login and logout (more about this in the section's
 
 The project was hosted in Vercel and all environment variables needed for Firebase were added into a .env-example file, were you should add yours in order to make Login work, otherwise, you should use the live example, but notice this is a production link, so, please be careful and respectful when testing with it.
 Here's a live link to the project hosted in Vercel https://www.instituto-li-hon-ki.com.ar/
+Github link: https://github.com/Aldogro/li-hon-ki-ar
 
 For a better UX, you’ll see at code level that the app has a navbar which is always in sight, and all pages are lazy loaded, using react’s Suspense component to fallback to a Loading component with the logo of the Institute.
 Inside this, you’ll see the MainRoutes component, which is the part of the app in charge for the routing using ‘react-router-dom’, a very common router library for React. If you accidentally take the wrong route, a simple sign saying ‘Not found’ will show.
+
+For the information of each Instructor, Location, Style and Schedules (that are pretty much static), I've created a file called information jsx, which contains all the information needed to build all the pages and sections.
 
 #### UI Description:
 The website is separated into sections.
