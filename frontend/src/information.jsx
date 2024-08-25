@@ -1,4 +1,4 @@
-import empty from './assets/webp/img-placeholder.webp';
+//import empty from './assets/webp/img-placeholder.webp';
 
 // LOGOS
 import { ReactComponent as LamJoLogo } from './assets/svg/hung-gar-lam-jo-logo.svg';
@@ -11,6 +11,7 @@ import sifuFace from './assets/jpeg/sifu-face.jpeg';
 import joseFace from './assets/jpeg/jose-face.jpeg';
 import ignacioBruFace from './assets/jpeg/ignacio-bru-face.jpeg';
 import nahuelCampanariFace from './assets/jpeg/nahuel-campanari-face.jpeg';
+import paulaFace from './assets/jpeg/paula-face.jpeg';
 import wallyFace from './assets/png/wally-face.png';
 
 const hungGar = {
@@ -472,7 +473,7 @@ const mariaPaulaPertile = {
         <p>Email: <a href="mailto:mariapaulapertile@gmail.com">mariapaulapertile@gmail.com</a></p>
         <p>Celular: <a href="tel:+5493412143329">+54 9 341 2143329</a></p>
     `,
-    photo: empty,
+    photo: paulaFace,
     places: [kwoonCentral],
     activities: [funcional]
 };

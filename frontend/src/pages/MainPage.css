@@ -1,6 +1,6 @@
 .full-width-section {
     display: grid;
-    max-width: 100%;
+    max-width: calc(100% - 15px);
     justify-content: center;
 }
 
