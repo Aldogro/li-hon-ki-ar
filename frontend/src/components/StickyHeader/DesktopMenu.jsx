@@ -1,5 +1,5 @@
 import './StickyHeader.css';
-import { ReactComponent as MembersIcon } from '../../assets/svg/users.svg';
+// import { ReactComponent as MembersIcon } from '../../assets/svg/users.svg';
 import { Link } from 'react-router-dom';
 import { contactLinks, links } from './helper';
 
@@ -16,11 +16,11 @@ const DesktopMenu = () => {
                         {contact.content}
                     </a>
                 ))}
-                <Link to="/ingreso">
+                {/* <Link to="/ingreso">
                     <div className="contact-item">
                         <MembersIcon height={30} width={30} />
                     </div>
-                </Link>
+                </Link> */}
             </div>
             <div className="sections">
                 {links.map((link) => (
