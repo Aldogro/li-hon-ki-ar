@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, doc, updateDoc, deleteDoc, addDoc, query, orderBy } from 'firebase/firestore';
+import { getFirestore, collection, doc, updateDoc, deleteDoc, setDoc, query, orderBy } from 'firebase/firestore';
 import { deleteObject, getStorage, listAll, ref as storageRef } from 'firebase/storage';
 import { getAuth } from 'firebase/auth';
 import firebaseConfig from './firebase-config';
@@ -10,9 +10,10 @@ const auth = getAuth(app);
 const firestore = getFirestore(app)
 const storage = getStorage(app);
 
-const addDocToCollection = async (collectionName, doc) => {
+const addDocToCollection = async (collectionName, data) => {
     try {
-        return await addDoc(collection(firestore, collectionName), doc);
+        const docRef = doc(firestore, collectionName, data?.uid);
+        await setDoc(docRef, data, { merge: true });
     } catch (error) {
         throw new Error(error);
     }

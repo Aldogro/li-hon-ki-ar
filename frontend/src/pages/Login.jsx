@@ -1,5 +1,6 @@
-import { auth } from '../firebase/firebase';
+import { addDocToCollection, auth } from '../firebase/firebase';
 import { useAuthState, useSignInWithGoogle, useSignOut } from 'react-firebase-hooks/auth';
+
 import { ReactComponent as GoogleIcon } from '../assets/svg/google-icon.svg';
 import Button from '../components/Button'
 import './Login.css';
@@ -9,7 +10,21 @@ const Login = () => {
     const [loggedUser] = useAuthState(auth)
     // eslint-disable-next-line no-unused-vars
     const [signInWithGoogle, googleUser, loadingSignInWithGoogle, signInWithGoogleError] = useSignInWithGoogle(auth);
+
     const [signOut, loadingSignOut, signOutError] = useSignOut(auth);
+
+    if (loggedUser && loggedUser.uid) {
+        addDocToCollection(
+            'users',
+            {
+                uid: loggedUser?.uid,
+                displayName: loggedUser?.displayName,
+                email: loggedUser?.email,
+                photoURL: loggedUser?.photoURL,
+            },
+        );
+    }
+
     return (
         <div className="login-page-container">
             <h1>Ingreso</h1>

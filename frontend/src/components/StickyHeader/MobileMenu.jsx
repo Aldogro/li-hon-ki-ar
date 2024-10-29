@@ -1,14 +1,19 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
-import { Link } from 'react-router-dom';
-import { contactLinks, links } from './helper';
-import { ReactComponent as MenuIcon } from '../../assets/svg/menu.svg';
-import { ReactComponent as CloseIcon } from '../../assets/svg/close.svg';
-import logo from '../../assets/png/li-hon-ki-logo-200.png';
-import './StickyHeader.css';
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { auth } from '../../firebase/firebase'
+
+import { Link } from 'react-router-dom'
+import { contactLinks, links } from './helper'
+import { ReactComponent as MenuIcon } from '../../assets/svg/menu.svg'
+import { ReactComponent as CloseIcon } from '../../assets/svg/close.svg'
+import logo from '../../assets/png/li-hon-ki-logo-200.png'
+import './StickyHeader.css'
 
 const MobileMenu = () => {
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(false)
+    const [loggedUser] = useAuthState(auth)
+    const admins = process.env.REACT_APP_ADMINS
 
     return (
         open ? (
@@ -24,11 +29,26 @@ const MobileMenu = () => {
                             </Link>
                         </div>
                     ))}
-                    {/* <div className="link-item">
-                        <Link to="/ingreso" onClick={() => setOpen(false)}>
-                            Ingreso
-                        </Link>
-                    </div> */}
+                    {
+                        loggedUser && (
+                            <>
+                                {
+                                    admins?.split(',').includes(loggedUser.email) && (
+                                        <div className="link-item">
+                                            <Link to="/usuarios" onClick={() => setOpen(false)}>
+                                                Usuarios
+                                            </Link>
+                                        </div>
+                                    )
+                                }
+                                <div className="link-item">
+                                    <Link to="/ingreso" onClick={() => setOpen(false)}>
+                                        Mi Perfil
+                                    </Link>
+                                </div>
+                            </>
+                        )
+                    }
                 </div>
                 <img className="mobile-menu-logo" src={logo} alt="logo" />
                 <div className="mobile-menu-footer">

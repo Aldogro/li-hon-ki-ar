@@ -1,9 +1,13 @@
-import './StickyHeader.css';
-// import { ReactComponent as MembersIcon } from '../../assets/svg/users.svg';
-import { Link } from 'react-router-dom';
-import { contactLinks, links } from './helper';
+import './StickyHeader.css'
+import { Link } from 'react-router-dom'
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { contactLinks, links } from './helper'
+import { auth } from '../../firebase/firebase'
 
 const DesktopMenu = () => {
+    const [loggedUser] = useAuthState(auth)
+    const admins = process.env.REACT_APP_ADMINS
+
     return (
         <div className="desktop-menu">
             <div className="contact-info">
@@ -16,11 +20,6 @@ const DesktopMenu = () => {
                         {contact.content}
                     </a>
                 ))}
-                {/* <Link to="/ingreso">
-                    <div className="contact-item">
-                        <MembersIcon height={30} width={30} />
-                    </div>
-                </Link> */}
             </div>
             <div className="sections">
                 {links.map((link) => (
@@ -28,6 +27,24 @@ const DesktopMenu = () => {
                         <Link to={link.path}>{link.name}</Link>
                     </div>
                 ))}
+            </div>
+            <div className="sections">
+                {
+                    loggedUser && (
+                        <>
+                            {
+                                admins?.split(',').includes(loggedUser.email) && (
+                                    <div className="link-item">
+                                        <Link to="/usuarios">Usuarios</Link>
+                                    </div>
+                                )
+                            }
+                            <div className="link-item">
+                                <Link to="/ingreso">Mi Perfil</Link>
+                            </div>
+                        </>
+                    )
+                }
             </div>
         </div>
     );

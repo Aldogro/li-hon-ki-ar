@@ -1,5 +1,7 @@
 import { lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import { auth } from './firebase/firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 const MainPage = lazy(() => import('./pages/MainPage'));
 const HungGarPage = lazy(() => import('./pages/HungGarPage'));
@@ -13,7 +15,12 @@ const InstructorPage = lazy(() => import('./pages/InstructorPage'));
 const HorariosPage = lazy(() => import('./pages/HorariosPage'));
 const LoginPage = lazy(() => import('./pages/Login'));
 
+const UsersPage = lazy(() => import('./pages/UsersPage'));
+
 const MainRoutes = () => {
+    const [loggedUser] = useAuthState(auth);
+    const admins = process.env.REACT_APP_ADMINS;
+
     return (
         <Routes>
             <Route path="/" element={<MainPage />} />
@@ -27,7 +34,13 @@ const MainRoutes = () => {
             <Route path="/instructores/:instructorId" element={<InstructorPage />} />
             <Route path="/horarios" element={<HorariosPage />} />
             <Route path="/ingreso" element={<LoginPage />} />
-            <Route path="*" element={<div>Not Found</div>}/>
+            {
+                loggedUser && admins?.split(',').includes(loggedUser.email) && (
+                    <Route path="/usuarios" element={<UsersPage />} />
+                )
+            }
+
+            <Route path="*" element={<div>No se encontró</div>} />
         </Routes>
     );
 };
