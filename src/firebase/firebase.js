@@ -32,5 +32,6 @@ export {
     listAll,
     storageRef,
     deleteObject,
+    setDoc,
     updateDoc,
 };

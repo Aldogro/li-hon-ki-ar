@@ -14,6 +14,7 @@
 }
 
 .login-button-style {
+    color: var(--main-bg-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,4 +38,9 @@
 }
 .login-page-logged-user, span {
     font-weight: 600;
+}
+.login-page-logged-user > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }

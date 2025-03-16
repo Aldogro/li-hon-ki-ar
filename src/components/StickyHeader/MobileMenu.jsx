@@ -35,8 +35,8 @@ const MobileMenu = () => {
                                 {
                                     admins?.split(',').includes(loggedUser.email) && (
                                         <div className="link-item">
-                                            <Link to="/usuarios" onClick={() => setOpen(false)}>
-                                                Usuarios
+                                            <Link to="/administrador" onClick={() => setOpen(false)}>
+                                                Administrador
                                             </Link>
                                         </div>
                                     )

@@ -35,7 +35,7 @@ const DesktopMenu = () => {
                             {
                                 admins?.split(',').includes(loggedUser.email) && (
                                     <div className="link-item">
-                                        <Link to="/usuarios">Usuarios</Link>
+                                        <Link to="/administrador">Administrador</Link>
                                     </div>
                                 )
                             }

@@ -1,0 +1,14 @@
+.admin-user-info_user-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.admin-user-info_user-card > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.admin-user-info_actions {
+    gap: 8px;
+    display: flex;
+}

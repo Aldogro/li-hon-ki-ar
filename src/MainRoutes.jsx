@@ -15,7 +15,7 @@ const InstructorPage = lazy(() => import('./pages/InstructorPage'));
 const HorariosPage = lazy(() => import('./pages/HorariosPage'));
 const LoginPage = lazy(() => import('./pages/Login'));
 
-const UsersPage = lazy(() => import('./pages/UsersPage'));
+const AdminPage = lazy(() => import('./pages/AdminPage'));
 
 const MainRoutes = () => {
     const [loggedUser] = useAuthState(auth);
@@ -36,7 +36,7 @@ const MainRoutes = () => {
             <Route path="/ingreso" element={<LoginPage />} />
             {
                 loggedUser && admins?.split(',').includes(loggedUser.email) && (
-                    <Route path="/usuarios" element={<UsersPage />} />
+                    <Route path="/administrador" element={<AdminPage />} />
                 )
             }
 

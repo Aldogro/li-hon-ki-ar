@@ -5,6 +5,7 @@ import { ReactComponent as GoogleIcon } from '../assets/svg/google-icon.svg';
 import Button from '../components/Button'
 import './Login.css';
 import DisplayError from '../components/DisplayError';
+import LoggedUserInfo from '../components/LoggedUserInfo';
 
 const Login = () => {
     const [loggedUser] = useAuthState(auth)
@@ -35,11 +36,7 @@ const Login = () => {
                 {
                     loggedUser ? (
                         <>
-                            <div className="login-page-logged-user">
-                                Ingresaste como:
-                                <img height={50} src={loggedUser.photoURL} alt="user avatar" />
-                                <span>{loggedUser.displayName}</span>
-                            </div>
+                            <LoggedUserInfo loggedUser={loggedUser} />
                             <Button onClick={() => signOut()} disabled={loadingSignOut}>
                                 Salir
                             </Button>

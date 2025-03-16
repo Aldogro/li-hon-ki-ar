@@ -24,6 +24,9 @@
   color: var(--main-font-color);
 }
 
+h2 {
+  margin: 10px 0px;
+}
 a {
   font-weight: bold;
 }
@@ -38,4 +41,24 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+button {
+  background-color: var(--main-font-color);
+  color: var(--main-bg-color);
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+button:hover {
+  box-shadow: 0px 0px 5px var(--box-shadow-color);
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+select {
+  padding: 6px 10px;
+  border-radius: 6px;
 }

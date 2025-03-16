@@ -713,3 +713,27 @@ export const schedules = {
     'filial-comarca-andina': filialComarcaAndinaSchedule,
     'filial-rosario-zona-sur': filialSurSchedule,
 }
+
+export const categories = {
+    kap10: '10° Kap',
+    kap9: '9° Kap',
+    kap8: '8° Kap',
+    kap7: '7° Kap',
+    kap6: '6° Kap',
+    kap5: '5° Kap',
+    kap4: '4° Kap',
+    kap3: '3° Kap',
+    kap2: '2° Kap',
+    kap1: '1° Kap',
+    tuan1: '1er Tuan',
+    tuan2: '2do Tuan',
+    tuan3: '3er Tuan',
+    sifu: 'Sifu',
+};
+
+export const roles = {
+    sifu: 'Sifu',
+    professor: 'Profesor',
+    instructor: 'Instructor',
+    student: 'Estudiante',
+};
