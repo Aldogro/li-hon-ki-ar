@@ -14,6 +14,9 @@ h1 {
     margin: 0px auto;
     padding: 40px 0px 60px;
 }
+.common-content > h2 {
+    text-align: center;
+}
 
 .common-footer {
     width: 100%;

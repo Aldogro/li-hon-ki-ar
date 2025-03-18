@@ -1,5 +1,5 @@
 .admin-page_user-list {
     display: flex;
-    gap: 8px;
+    gap: 24px;
     flex-direction: column;
 }
