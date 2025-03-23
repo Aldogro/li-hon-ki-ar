@@ -1,0 +1,36 @@
+table {
+    margin-top: 20px;
+    box-sizing: border-box;
+    max-width: 1200px;
+    border-radius: 8px;
+    background-color: var(--header-bg);
+    border-collapse: collapse;
+}
+
+table tr th:first-child {
+    border-top-left-radius: 8px;
+}
+table tr th:last-child {
+    border-top-right-radius: 8px;
+}
+
+.table-header {
+    background: black;
+    height: 30px;
+}
+
+.table-header th {
+    color: white;
+}
+
+.table-header th {
+    padding: 4px 8px;
+}
+
+tbody td {
+    padding: 4px 8px;
+}
+
+tbody tr:nth-child(odd) {
+    background: #f0f0f0;
+}

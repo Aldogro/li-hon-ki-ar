@@ -1,36 +1,20 @@
-.admin-user-info_user-card {
+.table-avatar {
+    min-width: 80px;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 8px;
-}
-.admin-user-info_user-card > img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-.admin-user-info_actions {
-    gap: 8px;
-    display: flex;
+    justify-content: center;
 }
 
-@media (max-width: 1027px) {
-    .admin-user-info_user-card {
-        border: 1px solid;
-        padding: 10px;
-        border-radius: 6px;
-        margin: 0px 20px;
-        gap: 5px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        text-align: center;
-    }
-    .admin-user-info_user-card > img {
-        align-self: center;
-    }
-    .admin-user-info_actions {
-        justify-content: space-between;
-        width: 100%;
-    }
+.table-avatar img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.table-select select {
+    width: 100%;
+}
+
+.table-actions {
+    text-align: center;
 }

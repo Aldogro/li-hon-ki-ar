@@ -7,7 +7,7 @@ const FuncionalPage = () => {
         <CommonContainer>
             <div className="full-width-section">
                 <div className="school-banner-container">
-                    <h1>
+                    <h1 className="text-center">
                         Entrenamiento
                         <br/>
                         Funcional

@@ -11,7 +11,7 @@ const FilialPage = () => {
     return (
         <CommonContainer>
             <div className="filial-page">
-                <h1 className="filial-name">{filial.name}</h1>
+                <h1 className="text-center mb-3">{filial.name}</h1>
                 <h3 className="filial-address">{filial.address}</h3>
                 <Link className="filial-director" to={`/instructores/${filial.instructorId}`}>
                     {filial.director}
