@@ -1,0 +1,17 @@
+/* TEXT */
+h2 {
+    margin: 10px 0px;
+}
+a {
+    font-weight: bold;
+}
+
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}

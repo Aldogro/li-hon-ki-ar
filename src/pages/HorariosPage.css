@@ -7,9 +7,7 @@ table {
     box-sizing: border-box;
     max-width: 1200px;
     border-radius: 8px;
-    border: 3px solid var(--main-font-color);
     background-color: var(--header-bg);
-    border-collapse: unset;
 }
 
 table tr th {

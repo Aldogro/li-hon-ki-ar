@@ -2,9 +2,9 @@ import React from 'react';
 import CommonContainer from '../components/CommonContainer';
 import { collection, firestore } from '../firebase/firebase';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
-import AdminUserInfo from '../components/AdminUserInfo';
 import './AdminPage.css';
 import LoadingComponent from '../components/LoadingComponent';
+import AdminUsersTable from '../components/AdminUsersTable';
 
 const AdminPage = () => {
 
@@ -17,16 +17,16 @@ const AdminPage = () => {
 
     return (
         <CommonContainer>
-            <h1>Administrador</h1>
-            <p>En esta página podrás asignar los Roles y Categorías a los usuarios registrados.</p>
-            <p>Utilizar el email para otorgar manualmente los permisos en los canales privados de youtube.</p>
+            <h1 className="text-center mb-3">Administrador</h1>
+            <p className="text-center">En esta página podrás asignar los Roles y Categorías a los usuarios registrados.</p>
+            <p className="text-center">Utilizar el email para otorgar manualmente los permisos en los canales privados de youtube.</p>
 
-            <h2>Usuarios Registrados</h2>
+            <h2 className="text-left mt-3">Usuarios Registrados</h2>
             <div className="admin-page_user-list">
                 {
                     loading
                         ? <LoadingComponent />
-                        : users?.map((user) => (<AdminUserInfo key={user.uid} user={user} />))
+                        : <AdminUsersTable users={users} />
                 }
             </div>
         </CommonContainer>
