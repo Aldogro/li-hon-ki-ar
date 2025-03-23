@@ -17,4 +17,5 @@ button {
   select {
     padding: 6px 10px;
     border-radius: 6px;
+    min-width: 120px;
   }
