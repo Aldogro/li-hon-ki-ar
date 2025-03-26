@@ -2,6 +2,7 @@ import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { auth } from './firebase/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { ContentsAdminPage } from './pages/ContentsAdminPage';
 
 const MainPage = lazy(() => import('./pages/MainPage'));
 const HungGarPage = lazy(() => import('./pages/HungGarPage'));
@@ -36,9 +37,10 @@ const MainRoutes = () => {
             <Route path="/ingreso" element={<LoginPage />} />
             {
                 loggedUser && admins?.split(',').includes(loggedUser.email) && (
-                    <Route path="/administrador" element={<AdminPage />} />
+                    <Route path="/administrador" element={<AdminPage />} />                
                 )
             }
+             <Route path="/contenidos" element={<ContentsAdminPage />} />
 
             <Route path="*" element={<div>No se encontró</div>} />
         </Routes>

@@ -1,12 +1,12 @@
-import './StickyHeader.css'
-import { Link } from 'react-router-dom'
-import { useAuthState } from 'react-firebase-hooks/auth'
-import { contactLinks, links } from './helper'
-import { auth } from '../../firebase/firebase'
+import "./StickyHeader.css";
+import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { contactLinks, links } from "./helper";
+import { auth } from "../../firebase/firebase";
 
 const DesktopMenu = () => {
-    const [loggedUser] = useAuthState(auth)
-    const admins = process.env.REACT_APP_ADMINS
+    const [loggedUser] = useAuthState(auth);
+    const admins = process.env.REACT_APP_ADMINS;
 
     return (
         <div className="desktop-menu">
@@ -29,22 +29,18 @@ const DesktopMenu = () => {
                 ))}
             </div>
             <div className="sections">
-                {
-                    loggedUser && (
-                        <>
-                            {
-                                admins?.split(',').includes(loggedUser.email) && (
-                                    <div className="link-item">
-                                        <Link to="/administrador">Administrador</Link>
-                                    </div>
-                                )
-                            }
+                {loggedUser && (
+                    <>
+                        {admins?.split(",").includes(loggedUser.email) && (
                             <div className="link-item">
-                                <Link to="/ingreso">Mi Perfil</Link>
+                                <Link to="/administrador">Administrador</Link>
                             </div>
-                        </>
-                    )
-                }
+                        )}
+                        <div className="link-item">
+                            <Link to="/ingreso">Mi Perfil</Link>
+                        </div>
+                    </>
+                )}
             </div>
         </div>
     );
