@@ -1,3 +1,15 @@
+// PROGRAMS
+import HGKap8 from './assets/pdf/HGKap8.pdf';
+import HGKap7 from './assets/pdf/HGKap7.pdf';
+import HGKap6 from './assets/pdf/HGKap6.pdf';
+import HGKap5 from './assets/pdf/HGKap5.pdf';
+import HGKap4 from './assets/pdf/HGKap4.pdf';
+import HGKap3 from './assets/pdf/HGKap3.pdf';
+import HGKap2 from './assets/pdf/HGKap2.pdf';
+import HGKap1 from './assets/pdf/HGKap1.pdf';
+import HGTuan1 from './assets/pdf/HGTuan1.pdf';
+import HGFundamentos from './assets/pdf/HGFundamentos.pdf';
+
 //import empty from './assets/webp/img-placeholder.webp';
 
 // LOGOS
@@ -714,11 +726,9 @@ export const schedules = {
     'filial-rosario-zona-sur': filialSurSchedule,
 }
 
-export const categories = {
-    kap10: '10° Kap',
-    kap9: '9° Kap',
-    kap8: '8° Kap',
-    kap7: '7° Kap',
+export const hungGarCategories = {
+    kap8: 'Básico',
+    kap7: 'Preparatorio',
     kap6: '6° Kap',
     kap5: '5° Kap',
     kap4: '4° Kap',
@@ -731,9 +741,77 @@ export const categories = {
     sifu: 'Sifu',
 };
 
+export const styles = {
+    hungGar: 'Hung Gar',
+    wingChun: 'Wing Chun',
+};
+
 export const roles = {
     sifu: 'Sifu',
     professor: 'Profesor',
     instructor: 'Instructor',
     student: 'Estudiante',
+};
+
+export const programs = {
+    hgFundamentos: {
+        name: 'Fundamentos',
+        description: 'Fundamentos del Hung Gar e información básica',
+        pdf: HGFundamentos,
+        allowedCategories: ['kap8', 'kap7', 'kap6', 'kap5', 'kap4', 'kap3', 'kap2', 'kap1', 'tuan1', 'sifu'],
+    },
+    kap8: {
+        name: 'Nivel Básico',
+        description: 'Programa de entrenamiento para Nivel Básico',
+        pdf: HGKap8,
+        allowedCategories: ['kap8', 'kap7', 'kap6', 'kap5', 'kap4', 'kap3', 'kap2', 'kap1', 'tuan1', 'sifu'],
+    },
+    kap7: {
+        name: 'Nivel Preparatorio',
+        description: 'Programa de entrenamiento para Nivel Preparatorio',
+        pdf: HGKap7,
+        allowedCategories: ['kap7', 'kap6', 'kap5', 'kap4', 'kap3', 'kap2', 'kap1', 'tuan1', 'sifu'],
+    },
+    kap6: {
+        name: '6° Kap',
+        description: 'Programa de entrenamiento para 6° Kap',
+        pdf: HGKap6,
+        allowedCategories: ['kap6', 'kap5', 'kap4', 'kap3', 'kap2', 'kap1', 'tuan1', 'sifu'],
+    },
+    kap5: {
+        name: '5° Kap',
+        description: 'Programa de entrenamiento para 5° Kap',
+        pdf: HGKap5,
+        allowedCategories: ['kap5', 'kap4', 'kap3', 'kap2', 'kap1', 'tuan1', 'sifu'],
+    },
+    kap4: {
+        name: '4° Kap',
+        description: 'Programa de entrenamiento para 4° Kap',
+        pdf: HGKap4,
+        allowedCategories: ['kap4', 'kap3', 'kap2', 'kap1', 'tuan1', 'sifu'],
+    },
+    kap3: {
+        name: '3° Kap',
+        description: 'Programa de entrenamiento para 3° Kap',
+        pdf: HGKap3,
+        allowedCategories: ['kap3', 'kap2', 'kap1', 'tuan1', 'sifu'],
+    },
+    kap2: {
+        name: '2° Kap',
+        description: 'Programa de entrenamiento para 2° Kap',
+        pdf: HGKap2,
+        allowedCategories: ['kap2', 'kap1', 'tuan1', 'sifu'],
+    },
+    kap1: {
+        name: '1° Kap',
+        description: 'Programa de entrenamiento para 1° Kap',
+        pdf: HGKap1,
+        allowedCategories: ['kap1', 'tuan1', 'sifu'],
+    },
+    tuan1: {
+        name: '1er Tuan',
+        description: 'Programa de entrenamiento para 1er Tuan',
+        pdf: HGTuan1,
+        allowedCategories: ['tuan1', 'sifu'],
+    },
 };

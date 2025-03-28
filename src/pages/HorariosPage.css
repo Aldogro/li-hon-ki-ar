@@ -5,7 +5,6 @@
 
 table {
     box-sizing: border-box;
-    max-width: 1200px;
     border-radius: 8px;
     background-color: var(--header-bg);
 }

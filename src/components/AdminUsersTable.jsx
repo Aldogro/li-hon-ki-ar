@@ -8,6 +8,7 @@ const AdminUsersTable = ({ users }) => {
                     <th className="text-center">Avatar</th>
                     <th className="text-left">Nombre</th>
                     <th className="text-left">Email</th>
+                    <th>Estilo</th>
                     <th>Rol</th>
                     <th>Categoría</th>
                     <th>Acciones</th>
