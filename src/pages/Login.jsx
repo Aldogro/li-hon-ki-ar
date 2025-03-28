@@ -6,7 +6,7 @@ import Button from '../components/Button'
 import './Login.css';
 import DisplayError from '../components/DisplayError';
 import LoggedUserInfo from '../components/LoggedUserInfo';
-
+import MyContent from '../components/MyContent';
 const Login = () => {
     const [loggedUser] = useAuthState(auth)
     // eslint-disable-next-line no-unused-vars
@@ -28,14 +28,10 @@ const Login = () => {
 
     return (
         <div className="login-page-container">
-            <h1>Ingreso</h1>
-            <div className="login-page-text">
-                <p>Para poder acceder a diferentes contenidos exclusivos, separados por categoría, debes ingresar con una cuenta de google.</p>
-            </div>
-            <div className="login-page-button-container">
-                {
-                    loggedUser ? (
-                        <>
+            {
+                loggedUser ? (
+                    <>
+                        <div className="logged-user-info-container">
                             <LoggedUserInfo loggedUser={loggedUser} />
                             <Button onClick={() => signOut()} disabled={loadingSignOut}>
                                 Salir
@@ -47,16 +43,23 @@ const Login = () => {
                                     </DisplayError>
                                 )
                             }
-                        </>
-                    ) : (
+                        </div>
+                        <MyContent loggedUser={loggedUser} />
+                    </>
+                ) : (
+                    <div className="no-user-container">
+                        <h1>Ingreso</h1>
+                        <div className="login-page-text">
+                            <p>Para poder acceder a diferentes contenidos exclusivos, separados por categoría, debes ingresar con una cuenta de google.</p>
+                        </div>
                         <Button onClick={() => signInWithGoogle()} disabled={loadingSignInWithGoogle}>
                             <div className="login-button-style">
                                 <GoogleIcon height={50} /> Ingresá con Google
                             </div>
                         </Button>
-                    )
-                }
-            </div>
+                    </div>
+                )
+            }
         </div>
     );
 };

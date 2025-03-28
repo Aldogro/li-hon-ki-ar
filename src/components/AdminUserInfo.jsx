@@ -1,18 +1,19 @@
 import React from 'react';
 import { firestore, setDoc, doc } from '../firebase/firebase';
-import { categories, roles } from '../information';
+import { styles, hungGarCategories, roles } from '../information';
 import './AdminUserInfo.css';
 
 const AdminUserInfo = ({ user }) => {
     const [role, setRole] = React.useState(user.role || 'student');
-    const [category, setCategory] = React.useState(user.category || 'kap10');
-
+    const [category, setCategory] = React.useState(user.category || 'kap8');
+    const [style, setStyle] = React.useState(user.style || '');
     const handleUpdate = () => {
         setDoc(
             doc(firestore, 'users', user.uid),
             {
                 role,
-                category
+                category,
+                style,
             },
             { merge: true }
         );
@@ -26,6 +27,21 @@ const AdminUserInfo = ({ user }) => {
                 </td>
                 <td className="text-left">{user.displayName}</td>
                 <td className="text-left">{user.email}</td>
+                <td className="table-select">
+                    <select
+                        name='style'
+                        onChange={(e) => setStyle(e.target.value)}
+                        value={style}
+                    >
+                        {
+                            Object.keys(styles).map((styleKey) => (
+                                <option key={styleKey} value={styleKey}>
+                                    {styles[styleKey]}
+                                </option>
+                            ))
+                        }
+                    </select>
+                </td>
                 <td className="table-select">
                     <select
                         name='role'
@@ -48,9 +64,9 @@ const AdminUserInfo = ({ user }) => {
                         value={category}
                     >
                         {
-                            Object.keys(categories).map((categoryKey) => (
+                            Object.keys(hungGarCategories).map((categoryKey) => (
                                 <option key={categoryKey} value={categoryKey}>
-                                    {categories[categoryKey]}
+                                    {hungGarCategories[categoryKey]}
                                 </option>
                             ))
                         }
@@ -58,7 +74,11 @@ const AdminUserInfo = ({ user }) => {
                 </td>
                 <td className="table-actions">
                     <button
-                        disabled={role === user.role && category === user.category}
+                        disabled={
+                            role === user.role
+                            && category === user.category
+                            && style === user.style
+                        }
                         onClick={handleUpdate}
                     >
                         Actualizar

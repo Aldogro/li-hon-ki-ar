@@ -1,7 +1,12 @@
+
+.table-container {
+    overflow-x: auto;
+}
+
 table {
     margin-top: 20px;
+    width: 100%;
     box-sizing: border-box;
-    max-width: 1200px;
     border-radius: 8px;
     background-color: var(--header-bg);
     border-collapse: collapse;
