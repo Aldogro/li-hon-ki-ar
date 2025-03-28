@@ -33,7 +33,7 @@ const InstructorCard = ({ instructor }) => {
 const InstructoresPage = () => {
     return (
         <CommonContainer>
-            <h1>Instructores</h1>
+            <h1 className="text-center mb-3">Instructores</h1>
             <div className="instructores-container">
                 {instructores.map((instructor) => (
                     <InstructorCard instructor={instructor} key={instructor.name} />

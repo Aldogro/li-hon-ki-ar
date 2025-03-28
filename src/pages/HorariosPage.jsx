@@ -21,7 +21,7 @@ const HorariosPage = () => {
     const parsedSchedule = getSchedule();
     return (
         <CommonContainer>
-            <h1>Horarios</h1>
+            <h1 className="text-center mb-3">Horarios</h1>
             <div className="horarios-container">
                 <table>
                     <thead className="table-header">

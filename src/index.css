@@ -1,20 +1,8 @@
-:root {
-  --main-bg-color: #ffffff;
-  --lightgray: #cccccc;
-  --main-font-color: #333333;
-  --main-font-color-light: #666666;
-  --header-bg: #33333333;
-  --box-shadow-color: #aaaaaa;
-  --danger: #881c1c;
-  --hung-gar: #c91b29;
-  --wing-chun: green;
-  --funcional: #576b95;
-  --sticky-header-height: 60px;
-  --title-size: 2rem;
-  --subtitle-1-size: 1.6rem;
-  --subtitle-2-size: 1.4rem;
-  --paragraph-size: 1.2rem;
-}
+@import url('./styles/form-elements.css');
+@import url('./styles/margins-and-paddings.css');
+@import url('./styles/table.css');
+@import url('./styles/text.css');
+@import url('./styles/variables.css');
 
 * {
   margin: 0px;
@@ -22,13 +10,6 @@
   box-sizing: border-box;
   text-decoration: none;
   color: var(--main-font-color);
-}
-
-h2 {
-  margin: 10px 0px;
-}
-a {
-  font-weight: bold;
 }
 
 body {
@@ -43,22 +24,11 @@ code {
     monospace;
 }
 
-button {
-  background-color: var(--main-font-color);
-  color: var(--main-bg-color);
-  border-radius: 6px;
-  padding: 6px 10px;
-  cursor: pointer;
-}
-button:hover {
-  box-shadow: 0px 0px 5px var(--box-shadow-color);
-}
-button:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-select {
-  padding: 6px 10px;
-  border-radius: 6px;
+.error {
+  font-size: 0.7rem;
+  display: block;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: pink;
+  color: red;
 }

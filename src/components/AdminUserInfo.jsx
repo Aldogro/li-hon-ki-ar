@@ -20,10 +20,13 @@ const AdminUserInfo = ({ user }) => {
 
     return (
         <React.Fragment>
-            <div className="admin-user-info_user-card">
-                <img src={user.photoURL} alt={user.displayName} />
-                {user.displayName} - {user.email}
-                <div className="admin-user-info_actions">
+            <tr>
+                <td className="table-avatar">
+                    <img src={user.photoURL} alt={user.displayName} />
+                </td>
+                <td className="text-left">{user.displayName}</td>
+                <td className="text-left">{user.email}</td>
+                <td className="table-select">
                     <select
                         name='role'
                         onChange={(e) => setRole(e.target.value)}
@@ -37,6 +40,8 @@ const AdminUserInfo = ({ user }) => {
                             ))
                         }
                     </select>
+                </td>
+                <td className="table-select">
                     <select
                         name='category'
                         onChange={(e) => setCategory(e.target.value)}
@@ -50,14 +55,16 @@ const AdminUserInfo = ({ user }) => {
                             ))
                         }
                     </select>
+                </td>
+                <td className="table-actions">
                     <button
                         disabled={role === user.role && category === user.category}
                         onClick={handleUpdate}
                     >
                         Actualizar
                     </button>
-                </div>
-            </div>
+                </td>
+            </tr>
         </React.Fragment>
     );
 };

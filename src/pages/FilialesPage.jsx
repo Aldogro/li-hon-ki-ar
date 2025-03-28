@@ -6,7 +6,7 @@ import './FilialesPage.css';
 const FilialesPage = () => {
     return (
         <CommonContainer>
-            <h1>Filiales</h1>
+            <h1 className="text-center mb-3">Filiales</h1>
             <div className="filiales-container">
                 {filiales.map((filial) => (
                     <Link key={filial.name} to={`/filiales/${filial.filialId}`}>

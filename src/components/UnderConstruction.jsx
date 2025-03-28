@@ -5,7 +5,7 @@ const UnderConstruction = () => {
     return (
         <div className="under-construction">
             <img src={logo} height="400" alt="school-logo" />
-            <h1>En construcción...</h1>
+            <h1 className="text-center mt-2">En construcción...</h1>
         </div>
     );
 };
