@@ -7,6 +7,7 @@ const AdminUserInfo = ({ user }) => {
     const [role, setRole] = React.useState(user.role || 'student');
     const [category, setCategory] = React.useState(user.category || 'kap8');
     const [style, setStyle] = React.useState(user.style || '');
+    
     const handleUpdate = () => {
         setDoc(
             doc(firestore, 'users', user.uid),

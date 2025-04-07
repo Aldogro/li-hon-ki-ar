@@ -1,0 +1,6 @@
+.admin-page_content-list {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    overflow-x: auto;
+}
