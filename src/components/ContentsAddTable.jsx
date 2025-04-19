@@ -1,8 +1,8 @@
-import React from "react";
-import { ContentsAddInfo } from "./ContentsAddInfo";
-import "./AdminContentsTable.css";
+import React from 'react';
+import ContentsAddInfo from './ContentsAddInfo';
+import './AdminContentsTable.css';
 
-export const ContentsAddTable = () => {
+const ContentsAddTable = () => {
     return (
         <table className="table">
             <colgroup>
@@ -27,3 +27,5 @@ export const ContentsAddTable = () => {
         </table>
     );
 };
+
+export default ContentsAddTable;

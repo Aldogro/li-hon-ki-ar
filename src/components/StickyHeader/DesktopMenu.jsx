@@ -1,8 +1,8 @@
-import "./StickyHeader.css";
-import { Link } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { contactLinks, links } from "./helper";
-import { auth } from "../../firebase/firebase";
+import './StickyHeader.css';
+import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { contactLinks, links } from './helper';
+import { auth } from '../../firebase/firebase';
 
 const DesktopMenu = () => {
     const [loggedUser] = useAuthState(auth);

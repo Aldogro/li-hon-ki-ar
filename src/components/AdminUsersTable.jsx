@@ -1,4 +1,4 @@
-import AdminUserInfo from "./AdminUserInfo";
+import AdminUserInfo from './AdminUserInfo';
 
 const AdminUsersTable = ({ users }) => {
     return (

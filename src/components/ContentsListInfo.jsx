@@ -1,10 +1,10 @@
-import React from "react";
-import { firestore } from "../firebase/firebase";
-import { doc, deleteDoc } from "firebase/firestore";
-import { hungGarCategories, roles } from "../information";
-import "./ContentsAddInfo.css";
+import React from 'react';
+import { firestore } from '../firebase/firebase';
+import { doc, deleteDoc } from 'firebase/firestore';
+import { hungGarCategories, roles } from '../information';
+import './ContentsAddInfo.css';
 
-export const ContentsListInfo = ({ content }) => {
+const ContentsListInfo = ({ content }) => {
     const handleDelete = async () => {
         const confirmDelete = window.confirm("¿Estás seguro de que deseas eliminar este contenido?");
         if (!confirmDelete) return;
@@ -34,3 +34,5 @@ export const ContentsListInfo = ({ content }) => {
         </tr>
     );
 };
+
+export default ContentsListInfo;
