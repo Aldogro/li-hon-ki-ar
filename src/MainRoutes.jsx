@@ -16,6 +16,7 @@ const HorariosPage = lazy(() => import('./pages/HorariosPage'));
 const LoginPage = lazy(() => import('./pages/Login'));
 
 const AdminPage = lazy(() => import('./pages/AdminPage'));
+const AdminContentsPage = lazy(() => import('./pages/AdminContentsPage'));
 
 const MainRoutes = () => {
     const [loggedUser] = useAuthState(auth);
@@ -36,10 +37,14 @@ const MainRoutes = () => {
             <Route path="/ingreso" element={<LoginPage />} />
             {
                 loggedUser && admins?.split(',').includes(loggedUser.email) && (
-                    <Route path="/administrador" element={<AdminPage />} />
+                    <Route path="/administrador" element={<AdminPage />} />                
                 )
             }
-
+            {
+                loggedUser && admins?.split(',').includes(loggedUser.email) && (
+                    <Route path="/contenidos" element={<AdminContentsPage />} />
+                )
+            }
             <Route path="*" element={<div>No se encontró</div>} />
         </Routes>
     );

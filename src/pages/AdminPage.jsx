@@ -9,13 +9,13 @@ import AdminUsersTable from '../components/AdminUsersTable';
 const AdminPage = () => {
 
     const [users, loading] = useCollectionData(
-        collection(firestore, 'users'),
+        collection(firestore, "users"),
         {
-          snapshotListenOptions: { includeMetadataChanges: true },
-        }
+            snapshotListenOptions: { includeMetadataChanges: true },
+        },
     );
 
-    return (
+   return (
         <CommonContainer>
             <h1 className="text-center mb-3">Administrador</h1>
             <p className="text-center">En esta página podrás asignar los Roles y Categorías a los usuarios registrados.</p>
