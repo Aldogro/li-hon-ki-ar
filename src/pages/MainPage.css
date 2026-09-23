@@ -58,7 +58,7 @@
 }
 
 @media (max-width: 1027px) {
-    .main-section__card-container.col3 {
+    .main-section__card-container {
         grid-template-columns: 1fr;
         padding: 0px 10px;
     }
