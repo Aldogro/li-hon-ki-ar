@@ -15,15 +15,12 @@ import HGFundamentos from './assets/pdf/HGFundamentos.pdf';
 // LOGOS
 import { ReactComponent as LamJoLogo } from './assets/svg/hung-gar-lam-jo-logo.svg';
 import { ReactComponent as WingChunLogo } from './assets/svg/wing-chun.svg';
-import { ReactComponent as FunctionalLogo} from './assets/svg/functional-logo.svg';
 //import { ReactComponent as SandaLogo } from './assets/svg/sanda.svg';
 
 // IMAGES
 import sifuFace from './assets/jpeg/sifu-face.jpeg';
-import joseFace from './assets/jpeg/jose-face.jpeg';
 import ignacioBruFace from './assets/jpeg/ignacio-bru-face.jpeg';
 import nahuelCampanariFace from './assets/jpeg/nahuel-campanari-face.jpeg';
-import paulaFace from './assets/jpeg/paula-face.jpeg';
 import wallyFace from './assets/png/wally-face.png';
 
 const hungGar = {
@@ -41,17 +38,17 @@ const wingChun = {
 //     name: 'Sanda',
 //     logo: SandaLogo,
 // }
-const funcional = {
-    activityId: 'funcional',
-    name: 'Entrenamiento Funcional',
-    logo: FunctionalLogo,
-}
+// const funcional = {
+//     activityId: 'funcional',
+//     name: 'Entrenamiento Funcional',
+//     logo: FunctionalLogo,
+// }
 
 export const activities = [
     hungGar,
     wingChun,
     // sanda,
-    funcional,
+    // funcional,
 ];
 
 const kwoonCentral = {
@@ -84,22 +81,11 @@ const filialComarcaAndina = {
     director: 'Profesor Nahuel Campanari',
     instructorId: 'prof-nahuel-campanari',
 };
-const filialRosarioZonaSur = {
-    filialId: 'filial-rosario-zona-sur',
-    name: 'Filial Rosario (Zona Sur)',
-    city: 'Rosario',
-    address: 'España 4588 esquina Coulin (Espacio Iluminarte)',
-    addressLink: 'https://maps.app.goo.gl/LnCNpjvtTTTSVqQWA',
-    activities: 'Hung Gar',
-    director: 'Instructor José Luis Cristaldo Bustamante',
-    instructorId: 'instructor-jose-luis-cb',
-};
 
 export const filiales = [
     kwoonCentral,
     filialLaPlata,
     filialComarcaAndina,
-    filialRosarioZonaSur,
 ];
 
 const sifuFabianGonzalez = {
@@ -442,22 +428,6 @@ const profNahuelCampanari = {
     places: [filialComarcaAndina],
     activities: [hungGar],
 };
-const profJoseLuis = {
-    instructorId: 'instructor-jose-luis-cb',
-    name: 'Instructor José Luis Cristaldo Bustamante',
-    yearsOfPractice: 10,
-    bio: `
-        Acerca de mí: 
-        <p>Comencé a practicar el estilo Hung Kuen el 12 de Noviembre de 2014, procurando un arte marcial que me posibilitara estar en forma, e inspirado por las películas de la serie "Érase una vez en China" de Jet Li y demás de Shaw Brothers.</p>
-        <p>Con nueve años ya de práctica, llevo cuatro impartiendo clases en el turno Niños en el Kwoon Central y un año en turno mixto (niños y adultos) en turno nocturno a mi cargo en Iluminarte.</p>
-        <p>Por otra parte, participé en torneos desde 2017, obteniendo en tal año el Primer puesto tanto en formas de manos (Gung Ji Foo Hoo Kuen) como de armas (Kunlun Gim) en el torneo Garra de Águila, reiterando la participación en 2022, obteniendo asimismo idénticos puestos en formas de manos (Foo Hook Seung Yin Kuen) cuanto en forma de armas (Kunlun Gim), y participando a su vez en 2023 en los Juegos CREAR en categoría mayores de 41 años, con forma de manos Lau Xing Kuen y forma de armas Kunlun Gim.
-        <p>Cabe señalar que en el ámbito profesional me desempeño como abogado egresado de la Universidad Nacional de Rosario desde Agosto de 2015 en las áreas civil, comercial y laboral.</p>
-        <p>Doy clases de Hung Gar para niños los días martes y jueves de 18:00hs a 19:00hs en el <a href="/filiales/kwoon-central">Kwoon Central</a>.</p>
-    `,
-    photo: joseFace,
-    places: [kwoonCentral, filialRosarioZonaSur],
-    activities: [hungGar],
-};
 const instructorIgnacioBruvera = {
     instructorId: 'instructor-ignacio-bruvera',
     name: 'Instructor Ignacio Bruvera',
@@ -472,58 +442,17 @@ const instructorIgnacioBruvera = {
     places: [filialLaPlata],
     activities: [hungGar],
 };
-const mariaPaulaPertile = {
-    instructorId: 'maria-paula-pertile',
-    name: 'María Paula Pertile',
-    yearsOfPractice: 0,
-    bio: `
-        <p>Mi nombre es María Paula Pertile tengo 37 años, soy Acompañante terapéutico/gerontológico, Instructora/entrenadora, realizó terapias alternativas.</p>
-        <p>Actualmente sigo practicando artes marciales como Sanda hace más de 10 años, Hung Gar alcancé 4to kap, 3 años de Brasilian Jiu Jitsu cinturón azul.</p>
-        <p>Brindo clases de entrenamiento funcional en el Instituto Li Hong Ki, <a href="/filiales/kwoon-central">Kwoon Central</a> y personalizados.</p>
-        <p>Formo parte de la escuela Li Hong ki hace ya unos 20 años siguiendo a mi mentor el <a href="/instructores/sifu-fabian-gonzalez">Sifu Fabián González</a>.</p>
-        <p>Las artes marciales ya son parte de mi vida me ayudaron a formar mi carácter y tener disciplina en lo que encare hoy dia.</p>
-        <p>Email: <a href="mailto:mariapaulapertile@gmail.com">mariapaulapertile@gmail.com</a></p>
-        <p>Celular: <a href="tel:+5493412143329">+54 9 341 2143329</a></p>
-    `,
-    photo: paulaFace,
-    places: [kwoonCentral],
-    activities: [funcional]
-};
 export const instructores = [
     sifuFabianGonzalez,
     //profMaxiGomez,  
     profWalterMansilla,
     profNahuelCampanari,  
-    profJoseLuis,
     instructorIgnacioBruvera,
-    mariaPaulaPertile,
 ];
 
 export const centralKwoonSchedule = [
     {
         day: 'Lunes',
-        timeIn: '08:00',
-        timeOut: '09:00',
-        name: 'Funcional (Paula)',
-        type: 'funcional',
-    },
-    {
-        day: 'Miércoles',
-        timeIn: '08:00',
-        timeOut: '09:00',
-        name: 'Funcional (Paula)',
-        type: 'funcional',
-    },
-    {
-        day: 'Viernes',
-        timeIn: '08:00',
-        timeOut: '09:00',
-        name: 'Funcional (Paula)',
-        type: 'funcional',
-    },
-
-    {
-        day: 'Lunes',
         timeIn: '09:30',
         timeOut: '10:30',
         name: 'Wing Chun (Manuel)',
@@ -535,27 +464,6 @@ export const centralKwoonSchedule = [
         timeOut: '10:30',
         name: 'Wing Chun (Manuel)',
         type: 'wing-chun',
-    },
-    {
-        day: 'Lunes',
-        timeIn: '10:30',
-        timeOut: '11:30',
-        name: 'Hung Gar (José)',
-        type: 'hung-gar',
-    },
-    {
-        day: 'Miércoles',
-        timeIn: '10:30',
-        timeOut: '11:30',
-        name: 'Hung Gar (José)',
-        type: 'hung-gar',
-    },
-    {
-        day: 'Viernes',
-        timeIn: '10:30',
-        timeOut: '11:30',
-        name: 'Hung Gar (José)',
-        type: 'hung-gar',
     },
     // {
     //     day: 'Martes',
@@ -571,27 +479,6 @@ export const centralKwoonSchedule = [
     //     name: 'Wing Chun (Tadeo)',
     //     type: 'wing-chun',
     // },
-    {
-        day: 'Lunes',
-        timeIn: '16:30',
-        timeOut: '17:30',
-        name: 'Hung Gar (José)',
-        type: 'hung-gar',
-    },
-    {
-        day: 'Miércoles',
-        timeIn: '16:30',
-        timeOut: '17:30',
-        name: 'Hung Gar (José)',
-        type: 'hung-gar',
-    },
-    {
-        day: 'Viernes',
-        timeIn: '16:30',
-        timeOut: '17:30',
-        name: 'Hung Gar (José)',
-        type: 'hung-gar',
-    },
     {
         day: 'Lunes',
         timeIn: '19:00',

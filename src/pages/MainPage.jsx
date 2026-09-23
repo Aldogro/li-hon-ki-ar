@@ -14,7 +14,7 @@ const MainPage = () => {
             </div>
             <div className="main-section first">
                 <h2>Actividades</h2>
-                <div className="main-section__card-container col3">
+                <div className="main-section__card-container">
                     {activities.map((activity) => (
                         <CommonCard
                             key={activity.name}
@@ -28,7 +28,7 @@ const MainPage = () => {
             <div className="separator"></div>
             <div className="main-section">
                 <h2>Profesores e Instructores</h2>
-                <div className="main-section__card-container col3">
+                <div className="main-section__card-container">
                     {instructores.map((instructor) => (
                         <CommonCard
                             key={instructor.name}

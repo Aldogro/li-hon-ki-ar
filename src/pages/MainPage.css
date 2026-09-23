@@ -27,10 +27,12 @@
 
 .main-section {
     margin-top: 40px;
+    margin: 0px auto;
 }
 
 .main-section.first {
     padding: 40px 0px 0px;
+    max-width: 1200px;
 }
 
 .main-section h2 {
@@ -42,6 +44,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
+    max-width: 1200px;
+    margin: 0px auto;
 }
 
 .main-section__card-container.col3 {
@@ -60,5 +64,9 @@
     }
     .main-section__card-container.activities {
         grid-template-columns: 1fr;
+    }
+    .main-section {
+        margin-top: 40px;
+        margin: 0px auto;
     }
 }
